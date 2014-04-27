@@ -1,3 +1,14 @@
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-26 15:45:04
 project --topLevelPackage com.eugene.hotelproj --projectName hotel-proj-1 --java 7 --packaging WAR
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-26 15:45:14
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-26 17:51:58
+jpa setup --provider HIBERNATE --database MYSQL
+entity jpa --class ~.models.HotelUser --testAutomatically
+entity jpa --class ~.models.UserRole --testAutomatically
+entity jpa --class ~.models.UserProfile --testAutomatically
+entity jpa --class ~.models.Room --testAutomatically
+entity jpa --class ~.models.RoomType --testAutomatically
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-04-27 00:37:23
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-27 12:15:49
+entity jpa --class ~.models.Reservation --testAutomatically
+entity jpa --class ~.models.Reserved --testAutomatically
