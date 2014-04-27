@@ -6,31 +6,15 @@ package com.eugene.hotelproj.models;
 import com.eugene.hotelproj.models.UserProfile;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Version;
 
 privileged aspect UserProfile_Roo_Jpa_Entity {
     
     declare @type: UserProfile: @Entity;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long UserProfile.id;
-    
     @Version
     @Column(name = "version")
     private Integer UserProfile.version;
-    
-    public Long UserProfile.getId() {
-        return this.id;
-    }
-    
-    public void UserProfile.setId(Long id) {
-        this.id = id;
-    }
     
     public Integer UserProfile.getVersion() {
         return this.version;

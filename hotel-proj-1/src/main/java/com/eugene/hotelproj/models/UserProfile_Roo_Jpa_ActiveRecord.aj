@@ -28,9 +28,9 @@ privileged aspect UserProfile_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM UserProfile o", UserProfile.class).getResultList();
     }
     
-    public static UserProfile UserProfile.findUserProfile(Long id) {
-        if (id == null) return null;
-        return entityManager().find(UserProfile.class, id);
+    public static UserProfile UserProfile.findUserProfile(Long userProfileId) {
+        if (userProfileId == null) return null;
+        return entityManager().find(UserProfile.class, userProfileId);
     }
     
     public static List<UserProfile> UserProfile.findUserProfileEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect UserProfile_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            UserProfile attached = UserProfile.findUserProfile(this.id);
+            UserProfile attached = UserProfile.findUserProfile(this.userProfileId);
             this.entityManager.remove(attached);
         }
     }

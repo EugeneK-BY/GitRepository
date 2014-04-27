@@ -24,7 +24,13 @@ privileged aspect UserRoleDataOnDemand_Roo_DataOnDemand {
     
     public UserRole UserRoleDataOnDemand.getNewTransientUserRole(int index) {
         UserRole obj = new UserRole();
+        setRoleName(obj, index);
         return obj;
+    }
+    
+    public void UserRoleDataOnDemand.setRoleName(UserRole obj, int index) {
+        String roleName = "roleName_" + index;
+        obj.setRoleName(roleName);
     }
     
     public UserRole UserRoleDataOnDemand.getSpecificUserRole(int index) {
@@ -36,14 +42,14 @@ privileged aspect UserRoleDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         UserRole obj = data.get(index);
-        Long id = obj.getId();
+        Long id = obj.getUserRoleId();
         return UserRole.findUserRole(id);
     }
     
     public UserRole UserRoleDataOnDemand.getRandomUserRole() {
         init();
         UserRole obj = data.get(rnd.nextInt(data.size()));
-        Long id = obj.getId();
+        Long id = obj.getUserRoleId();
         return UserRole.findUserRole(id);
     }
     

@@ -40,11 +40,11 @@ privileged aspect UserRoleIntegrationTest_Roo_IntegrationTest {
     public void UserRoleIntegrationTest.testFindUserRole() {
         UserRole obj = dod.getRandomUserRole();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserRoleId();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to provide an identifier", id);
         obj = UserRole.findUserRole(id);
         Assert.assertNotNull("Find method for 'UserRole' illegally returned null for id '" + id + "'", obj);
-        Assert.assertEquals("Find method for 'UserRole' returned the incorrect identifier", id, obj.getId());
+        Assert.assertEquals("Find method for 'UserRole' returned the incorrect identifier", id, obj.getUserRoleId());
     }
     
     @Test
@@ -73,7 +73,7 @@ privileged aspect UserRoleIntegrationTest_Roo_IntegrationTest {
     public void UserRoleIntegrationTest.testFlush() {
         UserRole obj = dod.getRandomUserRole();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserRoleId();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to provide an identifier", id);
         obj = UserRole.findUserRole(id);
         Assert.assertNotNull("Find method for 'UserRole' illegally returned null for id '" + id + "'", obj);
@@ -87,14 +87,14 @@ privileged aspect UserRoleIntegrationTest_Roo_IntegrationTest {
     public void UserRoleIntegrationTest.testMergeUpdate() {
         UserRole obj = dod.getRandomUserRole();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserRoleId();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to provide an identifier", id);
         obj = UserRole.findUserRole(id);
         boolean modified =  dod.modifyUserRole(obj);
         Integer currentVersion = obj.getVersion();
         UserRole merged = obj.merge();
         obj.flush();
-        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getId(), id);
+        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getUserRoleId(), id);
         Assert.assertTrue("Version for 'UserRole' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
     }
     
@@ -103,7 +103,7 @@ privileged aspect UserRoleIntegrationTest_Roo_IntegrationTest {
         Assert.assertNotNull("Data on demand for 'UserRole' failed to initialize correctly", dod.getRandomUserRole());
         UserRole obj = dod.getNewTransientUserRole(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'UserRole' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'UserRole' identifier to be null", obj.getId());
+        Assert.assertNull("Expected 'UserRole' identifier to be null", obj.getUserRoleId());
         try {
             obj.persist();
         } catch (final ConstraintViolationException e) {
@@ -115,14 +115,14 @@ privileged aspect UserRoleIntegrationTest_Roo_IntegrationTest {
             throw new IllegalStateException(msg.toString(), e);
         }
         obj.flush();
-        Assert.assertNotNull("Expected 'UserRole' identifier to no longer be null", obj.getId());
+        Assert.assertNotNull("Expected 'UserRole' identifier to no longer be null", obj.getUserRoleId());
     }
     
     @Test
     public void UserRoleIntegrationTest.testRemove() {
         UserRole obj = dod.getRandomUserRole();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserRoleId();
         Assert.assertNotNull("Data on demand for 'UserRole' failed to provide an identifier", id);
         obj = UserRole.findUserRole(id);
         obj.remove();

@@ -40,11 +40,11 @@ privileged aspect UserProfileIntegrationTest_Roo_IntegrationTest {
     public void UserProfileIntegrationTest.testFindUserProfile() {
         UserProfile obj = dod.getRandomUserProfile();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserProfileId();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to provide an identifier", id);
         obj = UserProfile.findUserProfile(id);
         Assert.assertNotNull("Find method for 'UserProfile' illegally returned null for id '" + id + "'", obj);
-        Assert.assertEquals("Find method for 'UserProfile' returned the incorrect identifier", id, obj.getId());
+        Assert.assertEquals("Find method for 'UserProfile' returned the incorrect identifier", id, obj.getUserProfileId());
     }
     
     @Test
@@ -73,7 +73,7 @@ privileged aspect UserProfileIntegrationTest_Roo_IntegrationTest {
     public void UserProfileIntegrationTest.testFlush() {
         UserProfile obj = dod.getRandomUserProfile();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserProfileId();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to provide an identifier", id);
         obj = UserProfile.findUserProfile(id);
         Assert.assertNotNull("Find method for 'UserProfile' illegally returned null for id '" + id + "'", obj);
@@ -87,14 +87,14 @@ privileged aspect UserProfileIntegrationTest_Roo_IntegrationTest {
     public void UserProfileIntegrationTest.testMergeUpdate() {
         UserProfile obj = dod.getRandomUserProfile();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserProfileId();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to provide an identifier", id);
         obj = UserProfile.findUserProfile(id);
         boolean modified =  dod.modifyUserProfile(obj);
         Integer currentVersion = obj.getVersion();
         UserProfile merged = obj.merge();
         obj.flush();
-        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getId(), id);
+        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getUserProfileId(), id);
         Assert.assertTrue("Version for 'UserProfile' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
     }
     
@@ -103,7 +103,7 @@ privileged aspect UserProfileIntegrationTest_Roo_IntegrationTest {
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to initialize correctly", dod.getRandomUserProfile());
         UserProfile obj = dod.getNewTransientUserProfile(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'UserProfile' identifier to be null", obj.getId());
+        Assert.assertNull("Expected 'UserProfile' identifier to be null", obj.getUserProfileId());
         try {
             obj.persist();
         } catch (final ConstraintViolationException e) {
@@ -115,14 +115,14 @@ privileged aspect UserProfileIntegrationTest_Roo_IntegrationTest {
             throw new IllegalStateException(msg.toString(), e);
         }
         obj.flush();
-        Assert.assertNotNull("Expected 'UserProfile' identifier to no longer be null", obj.getId());
+        Assert.assertNotNull("Expected 'UserProfile' identifier to no longer be null", obj.getUserProfileId());
     }
     
     @Test
     public void UserProfileIntegrationTest.testRemove() {
         UserProfile obj = dod.getRandomUserProfile();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        Long id = obj.getUserProfileId();
         Assert.assertNotNull("Data on demand for 'UserProfile' failed to provide an identifier", id);
         obj = UserProfile.findUserProfile(id);
         obj.remove();

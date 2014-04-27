@@ -24,7 +24,19 @@ privileged aspect HotelUserDataOnDemand_Roo_DataOnDemand {
     
     public HotelUser HotelUserDataOnDemand.getNewTransientHotelUser(int index) {
         HotelUser obj = new HotelUser();
+        setPassword(obj, index);
+        setUserName(obj, index);
         return obj;
+    }
+    
+    public void HotelUserDataOnDemand.setPassword(HotelUser obj, int index) {
+        String password = "password_" + index;
+        obj.setPassword(password);
+    }
+    
+    public void HotelUserDataOnDemand.setUserName(HotelUser obj, int index) {
+        String userName = "userName_" + index;
+        obj.setUserName(userName);
     }
     
     public HotelUser HotelUserDataOnDemand.getSpecificHotelUser(int index) {

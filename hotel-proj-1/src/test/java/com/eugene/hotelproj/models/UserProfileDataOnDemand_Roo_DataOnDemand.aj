@@ -24,7 +24,43 @@ privileged aspect UserProfileDataOnDemand_Roo_DataOnDemand {
     
     public UserProfile UserProfileDataOnDemand.getNewTransientUserProfile(int index) {
         UserProfile obj = new UserProfile();
+        setFatherName(obj, index);
+        setFirstName(obj, index);
+        setLastName(obj, index);
+        setMail(obj, index);
+        setPhoneNumber(obj, index);
+        setSkype(obj, index);
         return obj;
+    }
+    
+    public void UserProfileDataOnDemand.setFatherName(UserProfile obj, int index) {
+        String fatherName = "fatherName_" + index;
+        obj.setFatherName(fatherName);
+    }
+    
+    public void UserProfileDataOnDemand.setFirstName(UserProfile obj, int index) {
+        String firstName = "firstName_" + index;
+        obj.setFirstName(firstName);
+    }
+    
+    public void UserProfileDataOnDemand.setLastName(UserProfile obj, int index) {
+        String lastName = "lastName_" + index;
+        obj.setLastName(lastName);
+    }
+    
+    public void UserProfileDataOnDemand.setMail(UserProfile obj, int index) {
+        String mail = "mail_" + index;
+        obj.setMail(mail);
+    }
+    
+    public void UserProfileDataOnDemand.setPhoneNumber(UserProfile obj, int index) {
+        String phoneNumber = "phoneNumber_" + index;
+        obj.setPhoneNumber(phoneNumber);
+    }
+    
+    public void UserProfileDataOnDemand.setSkype(UserProfile obj, int index) {
+        String skype = "skype_" + index;
+        obj.setSkype(skype);
     }
     
     public UserProfile UserProfileDataOnDemand.getSpecificUserProfile(int index) {
@@ -36,14 +72,14 @@ privileged aspect UserProfileDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         UserProfile obj = data.get(index);
-        Long id = obj.getId();
+        Long id = obj.getUserProfileId();
         return UserProfile.findUserProfile(id);
     }
     
     public UserProfile UserProfileDataOnDemand.getRandomUserProfile() {
         init();
         UserProfile obj = data.get(rnd.nextInt(data.size()));
-        Long id = obj.getId();
+        Long id = obj.getUserProfileId();
         return UserProfile.findUserProfile(id);
     }
     

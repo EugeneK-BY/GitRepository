@@ -28,9 +28,9 @@ privileged aspect UserRole_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM UserRole o", UserRole.class).getResultList();
     }
     
-    public static UserRole UserRole.findUserRole(Long id) {
-        if (id == null) return null;
-        return entityManager().find(UserRole.class, id);
+    public static UserRole UserRole.findUserRole(Long userRoleId) {
+        if (userRoleId == null) return null;
+        return entityManager().find(UserRole.class, userRoleId);
     }
     
     public static List<UserRole> UserRole.findUserRoleEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect UserRole_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            UserRole attached = UserRole.findUserRole(this.id);
+            UserRole attached = UserRole.findUserRole(this.userRoleId);
             this.entityManager.remove(attached);
         }
     }
