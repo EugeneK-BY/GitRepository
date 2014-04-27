@@ -49,7 +49,7 @@ privileged aspect UserProfileDataOnDemand_Roo_DataOnDemand {
     }
     
     public void UserProfileDataOnDemand.setMail(UserProfile obj, int index) {
-        String mail = "mail_" + index;
+        String mail = "foo" + index + "@bar.com";
         obj.setMail(mail);
     }
     

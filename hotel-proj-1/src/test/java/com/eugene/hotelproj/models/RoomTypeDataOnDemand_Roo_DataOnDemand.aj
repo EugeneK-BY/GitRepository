@@ -24,7 +24,31 @@ privileged aspect RoomTypeDataOnDemand_Roo_DataOnDemand {
     
     public RoomType RoomTypeDataOnDemand.getNewTransientRoomType(int index) {
         RoomType obj = new RoomType();
+        setAirConditioning(obj, index);
+        setDescription(obj, index);
+        setFringe(obj, index);
+        setName(obj, index);
         return obj;
+    }
+    
+    public void RoomTypeDataOnDemand.setAirConditioning(RoomType obj, int index) {
+        Boolean airConditioning = true;
+        obj.setAirConditioning(airConditioning);
+    }
+    
+    public void RoomTypeDataOnDemand.setDescription(RoomType obj, int index) {
+        String description = "description_" + index;
+        obj.setDescription(description);
+    }
+    
+    public void RoomTypeDataOnDemand.setFringe(RoomType obj, int index) {
+        Boolean fringe = true;
+        obj.setFringe(fringe);
+    }
+    
+    public void RoomTypeDataOnDemand.setName(RoomType obj, int index) {
+        String name = "name_" + index;
+        obj.setName(name);
     }
     
     public RoomType RoomTypeDataOnDemand.getSpecificRoomType(int index) {

@@ -24,7 +24,19 @@ privileged aspect RoomDataOnDemand_Roo_DataOnDemand {
     
     public Room RoomDataOnDemand.getNewTransientRoom(int index) {
         Room obj = new Room();
+        setFloor(obj, index);
+        setRoomNumber(obj, index);
         return obj;
+    }
+    
+    public void RoomDataOnDemand.setFloor(Room obj, int index) {
+        int floor = index;
+        obj.setFloor(floor);
+    }
+    
+    public void RoomDataOnDemand.setRoomNumber(Room obj, int index) {
+        int roomNumber = index;
+        obj.setRoomNumber(roomNumber);
     }
     
     public Room RoomDataOnDemand.getSpecificRoom(int index) {

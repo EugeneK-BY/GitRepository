@@ -1,0 +1,36 @@
+<div id="menu" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes"/>
+
+
+<div id="header">
+    <div class="row-1">
+      <div class="wrapper">
+        <div class="logo">
+          <h1><a href="#">Five Star</a></h1>
+          <em>Hotel</em> <strong>True Luxury</strong> </div>
+        <div class="phones"> 1-800-412-45-56<br/>
+          1-800-542-64-48 </div>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="indent">
+        <!-- header-box begin -->
+        <div class="header-box">
+          <div class="inner">
+            <ul class="nav">
+              <li><a href="index.html" class="current">Home page</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="restaurant.html">Restaurant</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="booking.html">Booking</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- header-box end -->
+      </div>
+    </div>
+  </div>
+
+</div>

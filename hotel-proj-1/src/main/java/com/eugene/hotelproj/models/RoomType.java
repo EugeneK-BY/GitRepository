@@ -1,4 +1,9 @@
 package com.eugene.hotelproj.models;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -7,4 +12,18 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooJpaActiveRecord
 public class RoomType {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public Long id;
+	
+	@NotEmpty
+	public String name;
+	
+	public String description;
+	
+	public boolean airConditioning;
+	
+	public boolean fringe; 
+
 }

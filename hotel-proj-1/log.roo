@@ -12,3 +12,4 @@ entity jpa --class ~.models.RoomType --testAutomatically
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-04-27 12:15:49
 entity jpa --class ~.models.Reservation --testAutomatically
 entity jpa --class ~.models.Reserved --testAutomatically
+web mvc setup
