@@ -17,9 +17,15 @@
   </definition>
 
   <definition name="default-fs" template="/WEB-INF/layouts/default.jspx">
-    <put-attribute name="menu" value="/WEB-INF/views/menu-fs.jspx" />
-    <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" />
+    <put-attribute name="header" value="/WEB-INF/views/header-fs.jspx" />      
+    <put-attribute name="menu" value="/WEB-INF/views/menu-booking-fs.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer-fs.jspx" />
   </definition>
   
+  <definition name="default-home-page-fs" template="/WEB-INF/layouts/default.jspx">
+    <put-attribute name="header" value="/WEB-INF/views/header-fs.jspx" />      
+    <put-attribute name="menu" value="/WEB-INF/views/menu-booking-fs.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer-fs.jspx" />
+  </definition>  
   
 </tiles-definitions>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" id="footer" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+
+<div id="footer">
+    <ul class="nav">
+      <li><a href="#">Home</a>|</li>
+      <li><a href="#">Services</a>|</li>
+      <li><a href="#">Gallery</a>|</li>
+      <li><a href="#">Restaurant</a>|</li>
+      <li><a href="#">Testimonials</a>|</li>
+      <li><a href="#">Booking</a></li>
+    </ul>
+    <div class="wrapper">
+      <div class="fleft">Copyright © 2009 <a href="#">Name Here</a>. All Rights Reserved</div>
+      <div class="fright">Designed by TemplateMonster - <a href="http://www.templatemonster.com/">website templates</a> provider</div>
+    </div>
+  </div>
+  
+</div>

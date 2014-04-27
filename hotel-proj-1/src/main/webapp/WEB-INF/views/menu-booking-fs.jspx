@@ -1,0 +1,44 @@
+<div id="menu" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes"/>
+
+
+<div class="aside maxheight" style="height: 398px;">
+        <!-- box begin -->
+        <div class="box maxheight" style="height: 398px;">
+          <div class="inner">
+            <h3>Reservation:</h3>
+            <form action="#" id="reservation-form">
+              <fieldset>
+              <div class="field">
+                <label>Check In:</label>
+                <select class="select1">
+                  <option>30</option>
+                </select>
+                <select class="select2">
+                  <option>April 2009</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Check Out:</label>
+                <select class="select1">
+                  <option>01</option>
+                </select>
+                <select class="select2">
+                  <option>May 2009</option>
+                </select>
+              </div>
+              <div class="field"> Persons: 
+                <input type="text" value="1" />
+					 Rooms:
+                <input type="text" value="1" />
+              </div>
+              <div class="button"><span><span><a href="#">Check Availability</a></span></span></div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <!-- box end -->
+      </div>
+
+</div>
