@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_eugene_hotelproj_models_UserProfile" items="${userprofiles}" z="Wef8CFteUTw2ClBrDSXDuu7lEh8=">
+        <table:table data="${userprofiles}" id="l_com_eugene_hotelproj_models_UserProfile" path="/userprofiles" typeIdFieldName="userProfileId" z="ch7OaMkNisMdGn720zKydVj1K6I=">
+            <table:column id="c_com_eugene_hotelproj_models_UserProfile_firstName" property="firstName" z="Jpjsr9fuOJ2UEk4Io3ykBq1jM2Q="/>
+            <table:column id="c_com_eugene_hotelproj_models_UserProfile_lastName" property="lastName" z="hyvWTQSTuPysDkQmG3/a6rVFtVw="/>
+            <table:column id="c_com_eugene_hotelproj_models_UserProfile_fatherName" property="fatherName" z="HvF/Ks1TsuXlgZEufybQNzmVxLw="/>
+            <table:column id="c_com_eugene_hotelproj_models_UserProfile_phoneNumber" property="phoneNumber" z="wgvGCHN62wza/t+GIm6B2vjU4lE="/>
+            <table:column id="c_com_eugene_hotelproj_models_UserProfile_mail" property="mail" z="CJ6DoQk7q88YpXQqlhwrKFlZVt0="/>
+            <table:column id="c_com_eugene_hotelproj_models_UserProfile_skype" property="skype" z="CEVrNlC0vRmhIGAp4Vsqq7cuuJc="/>
+        </table:table>
+    </page:list>
+</div>

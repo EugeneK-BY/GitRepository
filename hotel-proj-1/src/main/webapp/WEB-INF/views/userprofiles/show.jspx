@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_eugene_hotelproj_models_UserProfile" object="${userprofile}" path="/userprofiles" z="yU2L3BgFiLakYxAZBEzxFtgsvMU=">
+        <field:display field="firstName" id="s_com_eugene_hotelproj_models_UserProfile_firstName" object="${userprofile}" z="HXggRNxs9V1SpZalFgMIX5eJ6Ao="/>
+        <field:display field="lastName" id="s_com_eugene_hotelproj_models_UserProfile_lastName" object="${userprofile}" z="L7qL2Xfg6q6XWrLidl7j0IOmEIM="/>
+        <field:display field="fatherName" id="s_com_eugene_hotelproj_models_UserProfile_fatherName" object="${userprofile}" z="9OQC+nyvDKNZRvBERyrm3wmiFpM="/>
+        <field:display field="phoneNumber" id="s_com_eugene_hotelproj_models_UserProfile_phoneNumber" object="${userprofile}" z="xL8YuP1te8GNqrUL5yQ8Eo/rKYI="/>
+        <field:display field="mail" id="s_com_eugene_hotelproj_models_UserProfile_mail" object="${userprofile}" z="xkoNd31LrG2ii5Po84eh/TTpMZI="/>
+        <field:display field="skype" id="s_com_eugene_hotelproj_models_UserProfile_skype" object="${userprofile}" z="IGQbIb8VTLBdc4bB9fWTQ+/ogCM="/>
+    </page:show>
+</div>

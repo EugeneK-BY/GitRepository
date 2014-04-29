@@ -47,4 +47,36 @@ privileged aspect RoomType_Roo_JavaBean {
         this.fringe = fringe;
     }
     
+    public int RoomType.getRooms() {
+        return this.Rooms;
+    }
+    
+    public void RoomType.setRooms(int Rooms) {
+        this.Rooms = Rooms;
+    }
+    
+    public int RoomType.getBeds() {
+        return this.Beds;
+    }
+    
+    public void RoomType.setBeds(int Beds) {
+        this.Beds = Beds;
+    }
+    
+    public int RoomType.getBaths() {
+        return this.Baths;
+    }
+    
+    public void RoomType.setBaths(int Baths) {
+        this.Baths = Baths;
+    }
+    
+    public String RoomType.getImage() {
+        return this.image;
+    }
+    
+    public void RoomType.setImage(String image) {
+        this.image = image;
+    }
+    
 }

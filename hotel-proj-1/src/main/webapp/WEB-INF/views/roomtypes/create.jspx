@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_eugene_hotelproj_models_RoomType" modelAttribute="roomType" path="/roomtypes" render="${empty dependencies}" z="iYzhUz8YiC0OtnuI4/767p/fCEw=">
+        <field:input field="name" id="c_com_eugene_hotelproj_models_RoomType_name" z="25clzQAskOWzkp6ah56Sb9ptBAY="/>
+        <field:input field="description" id="c_com_eugene_hotelproj_models_RoomType_description" z="EUWU3Mtkk6EGrR/ycdtpzymDV9I="/>
+        <field:checkbox field="airConditioning" id="c_com_eugene_hotelproj_models_RoomType_airConditioning" z="TRToYvegM3z7A8ke9eAgVUtgEAo="/>
+        <field:checkbox field="fringe" id="c_com_eugene_hotelproj_models_RoomType_fringe" z="SXF3wR2Ixj0SIZrBGPAzHzJgAV0="/>
+        <field:input field="Rooms" id="c_com_eugene_hotelproj_models_RoomType_Rooms" z="+qhTcN/ERO7CmoSuXBA1Bn6Gc+A="/>
+        <field:input field="Beds" id="c_com_eugene_hotelproj_models_RoomType_Beds" z="5Mv8dtNu10pCWEGqrmnADSahWmY="/>
+        <field:input field="Baths" id="c_com_eugene_hotelproj_models_RoomType_Baths" z="y8+D0s2+iXGtX21Jlep7gDfOCKU="/>
+        <field:input field="image" id="c_com_eugene_hotelproj_models_RoomType_image" z="AZCYfIdJxfuDPkdAvVWpi5wyOIM="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_eugene_hotelproj_models_RoomType" render="${not empty dependencies}" z="8+u5N40x2+mAvwoeLDui+JlW6E0="/>
+</div>

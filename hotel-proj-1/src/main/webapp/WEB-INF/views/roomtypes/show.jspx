@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_eugene_hotelproj_models_RoomType" object="${roomtype}" path="/roomtypes" z="9J7rOux/uJw72opGQ3Q5AUpfZb8=">
+        <field:display field="name" id="s_com_eugene_hotelproj_models_RoomType_name" object="${roomtype}" z="67z1DMNrz95Z+NTey7pz3EE30iw="/>
+        <field:display field="description" id="s_com_eugene_hotelproj_models_RoomType_description" object="${roomtype}" z="g07+yPrKrVzHis3hnTjGvFDmRNk="/>
+        <field:display field="airConditioning" id="s_com_eugene_hotelproj_models_RoomType_airConditioning" object="${roomtype}" z="xiys35IiYcaExvXutNbOTJ4rnPw="/>
+        <field:display field="fringe" id="s_com_eugene_hotelproj_models_RoomType_fringe" object="${roomtype}" z="yjYJCknMdGgaXlZrSG6MnWfKMOI="/>
+        <field:display field="rooms" id="s_com_eugene_hotelproj_models_RoomType_Rooms" object="${roomtype}" z="1/eWrf6ys2DOB3SLqdlSpJv2FjU="/>
+        <field:display field="beds" id="s_com_eugene_hotelproj_models_RoomType_Beds" object="${roomtype}" z="2hW7w5FCrtrWcRaXsffN0SqghWo="/>
+        <field:display field="baths" id="s_com_eugene_hotelproj_models_RoomType_Baths" object="${roomtype}" z="UzX+DG7FfJ7tXLwiCyOuIbWM1lw="/>
+        <field:display field="image" id="s_com_eugene_hotelproj_models_RoomType_image" object="${roomtype}" z="smyPazjZUm+OLOAQqHjk3XxlhUk="/>
+    </page:show>
+</div>

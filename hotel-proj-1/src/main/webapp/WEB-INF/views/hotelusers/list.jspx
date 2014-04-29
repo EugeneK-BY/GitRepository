@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_eugene_hotelproj_models_HotelUser" items="${hotelusers}" z="dROWf2361jMdRRkzM2Y/kdlAXJs=">
+        <table:table data="${hotelusers}" id="l_com_eugene_hotelproj_models_HotelUser" path="/hotelusers" z="Oeh3rPSDfk92fH6qE0e1tovpjJQ=">
+            <table:column id="c_com_eugene_hotelproj_models_HotelUser_userName" property="userName" z="mPA9T5O61MbyhK0SKALKTJewhao="/>
+            <table:column id="c_com_eugene_hotelproj_models_HotelUser_password" property="password" z="T8cQsP0X3uYteNLZSnpUotAhJww="/>
+        </table:table>
+    </page:list>
+</div>

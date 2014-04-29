@@ -4,6 +4,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -25,5 +26,16 @@ public class RoomType {
 	public boolean airConditioning;
 	
 	public boolean fringe; 
+	
+	@Range(min=1, max=1000)
+	public int Rooms;
+	
+	@Range(min=1, max=4)
+	public int Beds;
+	
+	@Range(min=1, max=3)
+	public int Baths;
+	
+	public String image; 
 
 }

@@ -25,15 +25,29 @@ privileged aspect RoomTypeDataOnDemand_Roo_DataOnDemand {
     public RoomType RoomTypeDataOnDemand.getNewTransientRoomType(int index) {
         RoomType obj = new RoomType();
         setAirConditioning(obj, index);
+        setBaths(obj, index);
+        setBeds(obj, index);
         setDescription(obj, index);
         setFringe(obj, index);
+        setImage(obj, index);
         setName(obj, index);
+        setRooms(obj, index);
         return obj;
     }
     
     public void RoomTypeDataOnDemand.setAirConditioning(RoomType obj, int index) {
         Boolean airConditioning = true;
         obj.setAirConditioning(airConditioning);
+    }
+    
+    public void RoomTypeDataOnDemand.setBaths(RoomType obj, int index) {
+        int Baths = index;
+        obj.setBaths(Baths);
+    }
+    
+    public void RoomTypeDataOnDemand.setBeds(RoomType obj, int index) {
+        int Beds = index;
+        obj.setBeds(Beds);
     }
     
     public void RoomTypeDataOnDemand.setDescription(RoomType obj, int index) {
@@ -46,9 +60,19 @@ privileged aspect RoomTypeDataOnDemand_Roo_DataOnDemand {
         obj.setFringe(fringe);
     }
     
+    public void RoomTypeDataOnDemand.setImage(RoomType obj, int index) {
+        String image = "image_" + index;
+        obj.setImage(image);
+    }
+    
     public void RoomTypeDataOnDemand.setName(RoomType obj, int index) {
         String name = "name_" + index;
         obj.setName(name);
+    }
+    
+    public void RoomTypeDataOnDemand.setRooms(RoomType obj, int index) {
+        int Rooms = index;
+        obj.setRooms(Rooms);
     }
     
     public RoomType RoomTypeDataOnDemand.getSpecificRoomType(int index) {
