@@ -5,6 +5,8 @@ package com.eugene.hotelproj.controllers;
 
 import com.eugene.hotelproj.controllers.HotelUserController;
 import com.eugene.hotelproj.models.HotelUser;
+import com.eugene.hotelproj.models.UserProfile;
+import com.eugene.hotelproj.models.UserRole;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -86,6 +88,8 @@ privileged aspect HotelUserController_Roo_Controller {
     
     void HotelUserController.populateEditForm(Model uiModel, HotelUser hotelUser) {
         uiModel.addAttribute("hotelUser", hotelUser);
+        uiModel.addAttribute("userprofiles", UserProfile.findAllUserProfiles());
+        uiModel.addAttribute("userroles", UserRole.findAllUserRoles());
     }
     
     String HotelUserController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

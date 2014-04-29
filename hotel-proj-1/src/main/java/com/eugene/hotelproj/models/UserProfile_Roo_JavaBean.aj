@@ -63,4 +63,20 @@ privileged aspect UserProfile_Roo_JavaBean {
         this.skype = skype;
     }
     
+    public String UserProfile.getCountry() {
+        return this.country;
+    }
+    
+    public void UserProfile.setCountry(String country) {
+        this.country = country;
+    }
+    
+    public String UserProfile.getCity() {
+        return this.city;
+    }
+    
+    public void UserProfile.setCity(String city) {
+        this.city = city;
+    }
+    
 }

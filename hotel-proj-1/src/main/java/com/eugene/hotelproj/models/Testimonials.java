@@ -1,8 +1,10 @@
 package com.eugene.hotelproj.models;
+
+import java.util.Date;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.roo.addon.javabean.RooJavaBean;
@@ -12,21 +14,19 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class HotelUser {
-	
+public class Testimonials {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long id;
 	
 	@NotEmpty
-	public String userName;
+	public Date date;
+	
 	@NotEmpty
-	public String password;
+	public HotelUser hotelUser;
 	
-	@ManyToOne
-	public UserProfile userProfile;
-	
-	@ManyToOne
-	public UserRole userRole;
+	@NotEmpty
+	public String text;
 	
 }

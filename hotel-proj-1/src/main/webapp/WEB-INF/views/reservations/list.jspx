@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_eugene_hotelproj_models_Reservation" items="${reservations}" z="QKk4wC0rkepKl26ePE2m0/TuUnk=">
+        <table:table data="${reservations}" id="l_com_eugene_hotelproj_models_Reservation" path="/reservations" z="/MdEaef4ouRV+7gJ/3SvW6L15ZI=">
+            <table:column date="true" dateTimePattern="${reservation_datein_date_format}" id="c_com_eugene_hotelproj_models_Reservation_dateIn" property="dateIn" z="Nz2nd0GDZ2gwjuT20t9oVCRJ8yc="/>
+            <table:column date="true" dateTimePattern="${reservation_dateout_date_format}" id="c_com_eugene_hotelproj_models_Reservation_dateOut" property="dateOut" z="dW/rUPHDWl5FQfcvlSCt7QTmmVY="/>
+            <table:column id="c_com_eugene_hotelproj_models_Reservation_room" property="room" z="zhwRq6uI00EGX6eT5xxSLzonyQU="/>
+        </table:table>
+    </page:list>
+</div>

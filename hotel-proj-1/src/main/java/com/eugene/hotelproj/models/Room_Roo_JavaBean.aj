@@ -4,6 +4,7 @@
 package com.eugene.hotelproj.models;
 
 import com.eugene.hotelproj.models.Room;
+import com.eugene.hotelproj.models.RoomType;
 
 privileged aspect Room_Roo_JavaBean {
     
@@ -29,6 +30,14 @@ privileged aspect Room_Roo_JavaBean {
     
     public void Room.setFloor(int floor) {
         this.floor = floor;
+    }
+    
+    public RoomType Room.getRoomType() {
+        return this.roomType;
+    }
+    
+    public void Room.setRoomType(RoomType roomType) {
+        this.roomType = roomType;
     }
     
 }

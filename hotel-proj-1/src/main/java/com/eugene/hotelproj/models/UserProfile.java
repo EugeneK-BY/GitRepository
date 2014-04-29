@@ -20,13 +20,23 @@ public class UserProfile {
 	
 	@NotEmpty
 	public String firstName;
+	
 	@NotEmpty
 	public String lastName;
+	
 	public String fatherName;
 	
 	public String phoneNumber;
+	
 	@NotEmpty @Email
 	public String mail;
+	
 	public String skype;
+	
+	public String country; 
+	
+	public String city;
+	
+	
 	
 }

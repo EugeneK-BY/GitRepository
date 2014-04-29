@@ -6,6 +6,8 @@
         <table:table data="${hotelusers}" id="l_com_eugene_hotelproj_models_HotelUser" path="/hotelusers" z="Oeh3rPSDfk92fH6qE0e1tovpjJQ=">
             <table:column id="c_com_eugene_hotelproj_models_HotelUser_userName" property="userName" z="mPA9T5O61MbyhK0SKALKTJewhao="/>
             <table:column id="c_com_eugene_hotelproj_models_HotelUser_password" property="password" z="T8cQsP0X3uYteNLZSnpUotAhJww="/>
+            <table:column id="c_com_eugene_hotelproj_models_HotelUser_userProfile" property="userProfile" z="NohNImMkMEvDHbBXYbnowlaE4ss="/>
+            <table:column id="c_com_eugene_hotelproj_models_HotelUser_userRole" property="userRole" z="xoZXaJMnIOx5synEcRwuePuLjoI="/>
         </table:table>
     </page:list>
 </div>

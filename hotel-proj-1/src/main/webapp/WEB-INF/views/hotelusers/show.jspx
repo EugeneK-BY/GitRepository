@@ -5,5 +5,7 @@
     <page:show id="ps_com_eugene_hotelproj_models_HotelUser" object="${hoteluser}" path="/hotelusers" z="DQCStzfxYOsU27G9IdbX0jQtumw=">
         <field:display field="userName" id="s_com_eugene_hotelproj_models_HotelUser_userName" object="${hoteluser}" z="JvKIZNceazR4meLxmB8q8aTEhOE="/>
         <field:display field="password" id="s_com_eugene_hotelproj_models_HotelUser_password" object="${hoteluser}" z="121Yl+YA1HGGFZlbjquGG9K9X/c="/>
+        <field:display field="userProfile" id="s_com_eugene_hotelproj_models_HotelUser_userProfile" object="${hoteluser}" z="2i0jocilobKEf6wXg7LlDcbZ/ng="/>
+        <field:display field="userRole" id="s_com_eugene_hotelproj_models_HotelUser_userRole" object="${hoteluser}" z="1BU0KBlTVOa6u/JflyKSq5Knn+o="/>
     </page:show>
 </div>

@@ -3,24 +3,24 @@
 
 package com.eugene.hotelproj.models;
 
-import com.eugene.hotelproj.models.Reservation;
+import com.eugene.hotelproj.models.Testimonials;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Version;
 
-privileged aspect Reservation_Roo_Jpa_Entity {
+privileged aspect Testimonials_Roo_Jpa_Entity {
     
-    declare @type: Reservation: @Entity;
+    declare @type: Testimonials: @Entity;
     
     @Version
     @Column(name = "version")
-    private Integer Reservation.version;
+    private Integer Testimonials.version;
     
-    public Integer Reservation.getVersion() {
+    public Integer Testimonials.getVersion() {
         return this.version;
     }
     
-    public void Reservation.setVersion(Integer version) {
+    public void Testimonials.setVersion(Integer version) {
         this.version = version;
     }
     

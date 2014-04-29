@@ -5,6 +5,7 @@
     <form:create id="fc_com_eugene_hotelproj_models_Room" modelAttribute="room" path="/rooms" render="${empty dependencies}" z="wJgcfJ8gsSyglD4LaIxB1V+JYzk=">
         <field:input field="roomNumber" id="c_com_eugene_hotelproj_models_Room_roomNumber" z="xTWYVeDeRfj/86ApAoNh9DVhS1Y="/>
         <field:input field="floor" id="c_com_eugene_hotelproj_models_Room_floor" z="2KByIIvSmMUWumrao2G/og3olOQ="/>
+        <field:select field="roomType" id="c_com_eugene_hotelproj_models_Room_roomType" itemValue="id" items="${roomtypes}" path="/roomtypes" z="YRb2lDSKVzA1VkHeMeywnj1hi34="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_eugene_hotelproj_models_Room" render="${not empty dependencies}" z="6jSXwnTAhb3zNe7Vw4LbyQdvuSU="/>
 </div>

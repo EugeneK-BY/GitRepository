@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_eugene_hotelproj_models_Reserved" object="${reserved}" path="/reserveds" z="EL5ABHvpYEg68QdDzgdeAPOr7w8=">
+        <field:display date="true" dateTimePattern="${reserved_datein_date_format}" field="dateIn" id="s_com_eugene_hotelproj_models_Reserved_dateIn" object="${reserved}" z="wRuLlw2boZmFB/FqT9G1PyqaKkM="/>
+        <field:display date="true" dateTimePattern="${reserved_dateout_date_format}" field="dateOut" id="s_com_eugene_hotelproj_models_Reserved_dateOut" object="${reserved}" z="4y8Rel1nS+nN1BCYIlG3AYE6ZQw="/>
+        <field:display field="room" id="s_com_eugene_hotelproj_models_Reserved_room" object="${reserved}" z="WqJOz+KgIaKHcl4XhEF4ZcZpLZY="/>
+    </page:show>
+</div>

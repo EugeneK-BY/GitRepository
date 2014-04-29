@@ -5,13 +5,16 @@ package com.eugene.hotelproj.models;
 
 import com.eugene.hotelproj.models.Reservation;
 import com.eugene.hotelproj.models.ReservationDataOnDemand;
+import com.eugene.hotelproj.models.RoomDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect ReservationDataOnDemand_Roo_DataOnDemand {
@@ -22,9 +25,24 @@ privileged aspect ReservationDataOnDemand_Roo_DataOnDemand {
     
     private List<Reservation> ReservationDataOnDemand.data;
     
+    @Autowired
+    RoomDataOnDemand ReservationDataOnDemand.roomDataOnDemand;
+    
     public Reservation ReservationDataOnDemand.getNewTransientReservation(int index) {
         Reservation obj = new Reservation();
+        setDateIn(obj, index);
+        setDateOut(obj, index);
         return obj;
+    }
+    
+    public void ReservationDataOnDemand.setDateIn(Reservation obj, int index) {
+        Date dateIn = new Date(new Date().getTime() + 10000000L);
+        obj.setDateIn(dateIn);
+    }
+    
+    public void ReservationDataOnDemand.setDateOut(Reservation obj, int index) {
+        Date dateOut = new Date(new Date().getTime() + 10000000L);
+        obj.setDateOut(dateOut);
     }
     
     public Reservation ReservationDataOnDemand.getSpecificReservation(int index) {

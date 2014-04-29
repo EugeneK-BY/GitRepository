@@ -5,6 +5,7 @@ package com.eugene.hotelproj.controllers;
 
 import com.eugene.hotelproj.controllers.ReservedController;
 import com.eugene.hotelproj.models.Reserved;
+import com.eugene.hotelproj.models.Room;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -86,6 +87,7 @@ privileged aspect ReservedController_Roo_Controller {
     
     void ReservedController.populateEditForm(Model uiModel, Reserved reserved) {
         uiModel.addAttribute("reserved", reserved);
+        uiModel.addAttribute("rooms", Room.findAllRooms());
     }
     
     String ReservedController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

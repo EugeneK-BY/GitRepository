@@ -9,5 +9,7 @@
         <field:input field="phoneNumber" id="c_com_eugene_hotelproj_models_UserProfile_phoneNumber" z="3EUYXyhhBi1e25b5s3cSzvh8HVs="/>
         <field:input field="mail" id="c_com_eugene_hotelproj_models_UserProfile_mail" z="/mXi2+SQsh8isAtxjVIzuS473BM="/>
         <field:input field="skype" id="c_com_eugene_hotelproj_models_UserProfile_skype" z="Xk/1FxzPD6CSLBnXPoUGwaFDDSA="/>
+        <field:input field="country" id="c_com_eugene_hotelproj_models_UserProfile_country" z="MLDumoKLQlC/szSMKMLHAicnG4Y="/>
+        <field:input field="city" id="c_com_eugene_hotelproj_models_UserProfile_city" z="kioWxb7KqEOfG6qY/Wcuujskc70="/>
     </form:update>
 </div>

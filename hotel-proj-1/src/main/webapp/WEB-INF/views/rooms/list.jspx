@@ -6,6 +6,7 @@
         <table:table data="${rooms}" id="l_com_eugene_hotelproj_models_Room" path="/rooms" z="VwDDj2B+0z7s+tA7VMYeFLy04TM=">
             <table:column id="c_com_eugene_hotelproj_models_Room_roomNumber" property="roomNumber" z="PMIkhRv0XLE0PZbLTR7c6IvAe30="/>
             <table:column id="c_com_eugene_hotelproj_models_Room_floor" property="floor" z="Q/utwI1d1ZMJAaCxezhn3JGMuRc="/>
+            <table:column id="c_com_eugene_hotelproj_models_Room_roomType" property="roomType" z="/6oDPLsfZZ88LdimMW5uIPf6DIA="/>
         </table:table>
     </page:list>
 </div>

@@ -22,7 +22,7 @@
               <li><a href="${context}/roomtypes/services">Services</a></li>
               <li><a href="gallery.html">Gallery</a></li>
               <li><a href="restaurant.html">Restaurant</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="${context}/ testimonials">Testimonials</a></li>
               <li><a href="booking.html">Booking</a></li>
             </ul>
           </div>

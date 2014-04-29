@@ -5,6 +5,8 @@ package com.eugene.hotelproj.models;
 
 import com.eugene.hotelproj.models.HotelUser;
 import com.eugene.hotelproj.models.HotelUserDataOnDemand;
+import com.eugene.hotelproj.models.UserProfileDataOnDemand;
+import com.eugene.hotelproj.models.UserRoleDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,6 +14,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect HotelUserDataOnDemand_Roo_DataOnDemand {
@@ -21,6 +24,12 @@ privileged aspect HotelUserDataOnDemand_Roo_DataOnDemand {
     private Random HotelUserDataOnDemand.rnd = new SecureRandom();
     
     private List<HotelUser> HotelUserDataOnDemand.data;
+    
+    @Autowired
+    UserProfileDataOnDemand HotelUserDataOnDemand.userProfileDataOnDemand;
+    
+    @Autowired
+    UserRoleDataOnDemand HotelUserDataOnDemand.userRoleDataOnDemand;
     
     public HotelUser HotelUserDataOnDemand.getNewTransientHotelUser(int index) {
         HotelUser obj = new HotelUser();

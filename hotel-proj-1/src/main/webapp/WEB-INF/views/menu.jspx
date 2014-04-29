@@ -23,5 +23,13 @@
             <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
             <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
         </menu:category>
+        <menu:category id="c_reservation" z="QOKmLQs8mRLEvu7n5roIvJzPgHc=">
+            <menu:item id="i_reservation_new" messageCode="global_menu_new" url="/reservations?form" z="VN+vNiuOsWM9mc3+Pnfd51o3YUc="/>
+            <menu:item id="i_reservation_list" messageCode="global_menu_list" url="/reservations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6zE/15aHij6RKEydLc48wX5Bg80="/>
+        </menu:category>
+        <menu:category id="c_reserved" z="lQOktGrC1IBcZhjNN0e2SlR8yus=">
+            <menu:item id="i_reserved_new" messageCode="global_menu_new" url="/reserveds?form" z="VY+1OOamiS3TTqI3QTbV6UfgKcs="/>
+            <menu:item id="i_reserved_list" messageCode="global_menu_list" url="/reserveds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="cpwxHXngHBS47Y2LjVWR+SLiMVo="/>
+        </menu:category>
     </menu:menu>
 </div>

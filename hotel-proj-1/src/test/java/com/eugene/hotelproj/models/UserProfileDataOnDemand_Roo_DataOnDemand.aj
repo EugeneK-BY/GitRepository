@@ -24,6 +24,8 @@ privileged aspect UserProfileDataOnDemand_Roo_DataOnDemand {
     
     public UserProfile UserProfileDataOnDemand.getNewTransientUserProfile(int index) {
         UserProfile obj = new UserProfile();
+        setCity(obj, index);
+        setCountry(obj, index);
         setFatherName(obj, index);
         setFirstName(obj, index);
         setLastName(obj, index);
@@ -31,6 +33,16 @@ privileged aspect UserProfileDataOnDemand_Roo_DataOnDemand {
         setPhoneNumber(obj, index);
         setSkype(obj, index);
         return obj;
+    }
+    
+    public void UserProfileDataOnDemand.setCity(UserProfile obj, int index) {
+        String city = "city_" + index;
+        obj.setCity(city);
+    }
+    
+    public void UserProfileDataOnDemand.setCountry(UserProfile obj, int index) {
+        String country = "country_" + index;
+        obj.setCountry(country);
     }
     
     public void UserProfileDataOnDemand.setFatherName(UserProfile obj, int index) {

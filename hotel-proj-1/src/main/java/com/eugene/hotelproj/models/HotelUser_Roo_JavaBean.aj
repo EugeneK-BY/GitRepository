@@ -4,6 +4,8 @@
 package com.eugene.hotelproj.models;
 
 import com.eugene.hotelproj.models.HotelUser;
+import com.eugene.hotelproj.models.UserProfile;
+import com.eugene.hotelproj.models.UserRole;
 
 privileged aspect HotelUser_Roo_JavaBean {
     
@@ -29,6 +31,22 @@ privileged aspect HotelUser_Roo_JavaBean {
     
     public void HotelUser.setPassword(String password) {
         this.password = password;
+    }
+    
+    public UserProfile HotelUser.getUserProfile() {
+        return this.userProfile;
+    }
+    
+    public void HotelUser.setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
+    }
+    
+    public UserRole HotelUser.getUserRole() {
+        return this.userRole;
+    }
+    
+    public void HotelUser.setUserRole(UserRole userRole) {
+        this.userRole = userRole;
     }
     
 }

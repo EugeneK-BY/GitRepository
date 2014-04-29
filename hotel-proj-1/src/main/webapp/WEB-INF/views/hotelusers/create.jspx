@@ -5,6 +5,8 @@
     <form:create id="fc_com_eugene_hotelproj_models_HotelUser" modelAttribute="hotelUser" path="/hotelusers" render="${empty dependencies}" z="Op6D584i62LpLTjmYf3wWyNpLms=">
         <field:input field="userName" id="c_com_eugene_hotelproj_models_HotelUser_userName" z="C9tNZF1gNQWyKi502zhEQWVQM9s="/>
         <field:input field="password" id="c_com_eugene_hotelproj_models_HotelUser_password" z="nX9AawDXm/qCJ8LaXBsP1TT9m38="/>
+        <field:select field="userProfile" id="c_com_eugene_hotelproj_models_HotelUser_userProfile" itemValue="userProfileId" items="${userprofiles}" path="/userprofiles" z="BnMqmStZjtSTQE34qGqBj1Ownaw="/>
+        <field:select field="userRole" id="c_com_eugene_hotelproj_models_HotelUser_userRole" itemValue="userRoleId" items="${userroles}" path="/userroles" z="/ah05oEG0uPH1wxpdRDWvoZW3+Y="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_eugene_hotelproj_models_HotelUser" render="${not empty dependencies}" z="crJe+fTneuJfAKhji9u+IW9hVxk="/>
 </div>

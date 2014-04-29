@@ -46,7 +46,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Reservation, String> ApplicationConversionServiceFactoryBean.getReservationToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.eugene.hotelproj.models.Reservation, java.lang.String>() {
             public String convert(Reservation reservation) {
-                return "(no displayable fields)";
+                return new StringBuilder().append(reservation.getDateIn()).append(' ').append(reservation.getDateOut()).toString();
             }
         };
     }
@@ -70,7 +70,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Reserved, String> ApplicationConversionServiceFactoryBean.getReservedToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.eugene.hotelproj.models.Reserved, java.lang.String>() {
             public String convert(Reserved reserved) {
-                return "(no displayable fields)";
+                return new StringBuilder().append(reserved.getDateIn()).append(' ').append(reserved.getDateOut()).toString();
             }
         };
     }
