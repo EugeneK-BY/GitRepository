@@ -14,7 +14,10 @@ public class RoomTypeController {
 	@RequestMapping("/services")
 	public ModelAndView kindOfRooms(){
 		
-		return new ModelAndView("pages-fs/services");
-		
+		RoomType.createBaseRoomTypes();
+		ModelAndView mav =  new ModelAndView("pages-fs/services");
+		mav.addObject("models", RoomType.getListOfRoomTypes());
+
+		return mav;
 	}
 }

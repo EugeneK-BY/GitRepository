@@ -11,5 +11,6 @@
         <field:input field="Beds" id="c_com_eugene_hotelproj_models_RoomType_Beds" z="5Mv8dtNu10pCWEGqrmnADSahWmY="/>
         <field:input field="Baths" id="c_com_eugene_hotelproj_models_RoomType_Baths" z="y8+D0s2+iXGtX21Jlep7gDfOCKU="/>
         <field:input field="image" id="c_com_eugene_hotelproj_models_RoomType_image" z="AZCYfIdJxfuDPkdAvVWpi5wyOIM="/>
+        <field:input field="price" id="c_com_eugene_hotelproj_models_RoomType_price" z="j5+XkEqjDtWaZjmzY49/aVa/jW4="/>
     </form:update>
 </div>

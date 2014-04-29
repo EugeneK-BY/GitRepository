@@ -16,6 +16,10 @@ privileged aspect RoomType_Roo_Jpa_Entity {
     @Column(name = "version")
     private Integer RoomType.version;
     
+    public RoomType.new() {
+        super();
+    }
+
     public Integer RoomType.getVersion() {
         return this.version;
     }

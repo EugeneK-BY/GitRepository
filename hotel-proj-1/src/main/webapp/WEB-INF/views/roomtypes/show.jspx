@@ -11,5 +11,6 @@
         <field:display field="beds" id="s_com_eugene_hotelproj_models_RoomType_Beds" object="${roomtype}" z="2hW7w5FCrtrWcRaXsffN0SqghWo="/>
         <field:display field="baths" id="s_com_eugene_hotelproj_models_RoomType_Baths" object="${roomtype}" z="UzX+DG7FfJ7tXLwiCyOuIbWM1lw="/>
         <field:display field="image" id="s_com_eugene_hotelproj_models_RoomType_image" object="${roomtype}" z="smyPazjZUm+OLOAQqHjk3XxlhUk="/>
+        <field:display field="price" id="s_com_eugene_hotelproj_models_RoomType_price" object="${roomtype}" z="zqqUiwuBe20lIJtgdaaV6p+hXGc="/>
     </page:show>
 </div>

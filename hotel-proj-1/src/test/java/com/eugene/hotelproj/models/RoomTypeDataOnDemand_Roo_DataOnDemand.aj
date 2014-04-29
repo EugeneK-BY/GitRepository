@@ -31,6 +31,7 @@ privileged aspect RoomTypeDataOnDemand_Roo_DataOnDemand {
         setFringe(obj, index);
         setImage(obj, index);
         setName(obj, index);
+        setPrice(obj, index);
         setRooms(obj, index);
         return obj;
     }
@@ -68,6 +69,11 @@ privileged aspect RoomTypeDataOnDemand_Roo_DataOnDemand {
     public void RoomTypeDataOnDemand.setName(RoomType obj, int index) {
         String name = "name_" + index;
         obj.setName(name);
+    }
+    
+    public void RoomTypeDataOnDemand.setPrice(RoomType obj, int index) {
+        double price = new Integer(index).doubleValue();
+        obj.setPrice(price);
     }
     
     public void RoomTypeDataOnDemand.setRooms(RoomType obj, int index) {

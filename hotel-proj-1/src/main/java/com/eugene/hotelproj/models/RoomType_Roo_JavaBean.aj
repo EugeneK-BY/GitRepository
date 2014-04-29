@@ -79,4 +79,12 @@ privileged aspect RoomType_Roo_JavaBean {
         this.image = image;
     }
     
+    public double RoomType.getPrice() {
+        return this.price;
+    }
+    
+    public void RoomType.setPrice(double price) {
+        this.price = price;
+    }
+    
 }
