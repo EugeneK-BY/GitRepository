@@ -1,9 +1,11 @@
 package com.eugene.hotelproj.dal;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.TypedQuery;
 
+import com.eugene.hotelproj.models.HotelUser;
 import com.eugene.hotelproj.models.Testimonials;
 
 public aspect TestimonialsAspect {
@@ -18,6 +20,17 @@ public aspect TestimonialsAspect {
 		
 		
 		return list;
+	}
+	
+	
+	public static void Testimonials.addTestimonials(HotelUser user, String text){
+		
+		Testimonials testimonials = new Testimonials();
+		testimonials.testimonialsText = text;
+		testimonials.date = new Date();
+		testimonials.hotelUser = user;
+		testimonials.persist();
+				
 	}
 	
 }

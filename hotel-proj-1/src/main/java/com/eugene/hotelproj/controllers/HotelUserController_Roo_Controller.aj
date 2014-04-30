@@ -28,6 +28,7 @@ privileged aspect HotelUserController_Roo_Controller {
             return "hotelusers/create";
         }
         uiModel.asMap().clear();
+        hotelUser.userProfile.persist();
         hotelUser.persist();
         return "redirect:/hotelusers/" + encodeUrlPathSegment(hotelUser.getId().toString(), httpServletRequest);
     }

@@ -2,9 +2,12 @@ package com.eugene.hotelproj.models;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.roo.addon.javabean.RooJavaBean;
@@ -20,13 +23,15 @@ public class Testimonials {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long id;
 	
-	@NotEmpty
+	@NotNull
 	public Date date;
 	
 	@NotEmpty
+	@ManyToOne
 	public HotelUser hotelUser;
 	
 	@NotEmpty
-	public String text;
+	@Column(name="testimonialsText", columnDefinition="TEXT")
+	public String testimonialsText;
 	
 }

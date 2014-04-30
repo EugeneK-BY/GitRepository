@@ -33,12 +33,12 @@ privileged aspect Testimonials_Roo_JavaBean {
         this.hotelUser = hotelUser;
     }
     
-    public String Testimonials.getText() {
-        return this.text;
+    public String Testimonials.getTestimonialsText() {
+        return this.testimonialsText;
     }
     
-    public void Testimonials.setText(String text) {
-        this.text = text;
+    public void Testimonials.setTestimonialsText(String testimonialsText) {
+        this.testimonialsText = testimonialsText;
     }
     
 }

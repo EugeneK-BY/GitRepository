@@ -9,6 +9,7 @@ import com.eugene.hotelproj.models.Reservation;
 import com.eugene.hotelproj.models.Reserved;
 import com.eugene.hotelproj.models.Room;
 import com.eugene.hotelproj.models.RoomType;
+import com.eugene.hotelproj.models.Testimonials;
 import com.eugene.hotelproj.models.UserProfile;
 import com.eugene.hotelproj.models.UserRole;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -139,6 +140,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Testimonials, String> ApplicationConversionServiceFactoryBean.getTestimonialsToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.eugene.hotelproj.models.Testimonials, java.lang.String>() {
+            public String convert(Testimonials testimonials) {
+                return new StringBuilder().append(testimonials.getDate()).append(' ').append(testimonials.getTestimonialsText()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Testimonials> ApplicationConversionServiceFactoryBean.getIdToTestimonialsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.eugene.hotelproj.models.Testimonials>() {
+            public com.eugene.hotelproj.models.Testimonials convert(java.lang.Long id) {
+                return Testimonials.findTestimonials(id);
+            }
+        };
+    }
+    
+    public Converter<String, Testimonials> ApplicationConversionServiceFactoryBean.getStringToTestimonialsConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.eugene.hotelproj.models.Testimonials>() {
+            public com.eugene.hotelproj.models.Testimonials convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Testimonials.class);
+            }
+        };
+    }
+    
     public Converter<UserProfile, String> ApplicationConversionServiceFactoryBean.getUserProfileToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.eugene.hotelproj.models.UserProfile, java.lang.String>() {
             public String convert(UserProfile userProfile) {
@@ -203,6 +228,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getRoomTypeToStringConverter());
         registry.addConverter(getIdToRoomTypeConverter());
         registry.addConverter(getStringToRoomTypeConverter());
+        registry.addConverter(getTestimonialsToStringConverter());
+        registry.addConverter(getIdToTestimonialsConverter());
+        registry.addConverter(getStringToTestimonialsConverter());
         registry.addConverter(getUserProfileToStringConverter());
         registry.addConverter(getIdToUserProfileConverter());
         registry.addConverter(getStringToUserProfileConverter());

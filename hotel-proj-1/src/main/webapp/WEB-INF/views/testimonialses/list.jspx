@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_eugene_hotelproj_models_Testimonials" items="${testimonialses}" z="rkcKnb5Lapix/SgHHu/grh19Hgk=">
+        <table:table data="${testimonialses}" id="l_com_eugene_hotelproj_models_Testimonials" path="/testimonialses" z="sqIx9JDZhR7BGXQEmPKsPFtmL/M=">
+            <table:column date="true" dateTimePattern="${testimonials_date_date_format}" id="c_com_eugene_hotelproj_models_Testimonials_date" property="date" z="lUdhA/Bd+QsM5vzA3U2bZ3jY9p0="/>
+            <table:column id="c_com_eugene_hotelproj_models_Testimonials_hotelUser" property="hotelUser" z="f3y466VDrAZdhrzc0k9RGZ48o0s="/>
+            <table:column id="c_com_eugene_hotelproj_models_Testimonials_text" property="text" z="Tse6LbBYs7hQNjJOFKFk+i/DL0U="/>
+        </table:table>
+    </page:list>
+</div>

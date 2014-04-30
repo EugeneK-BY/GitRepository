@@ -31,5 +31,9 @@
             <menu:item id="i_reserved_new" messageCode="global_menu_new" url="/reserveds?form" z="VY+1OOamiS3TTqI3QTbV6UfgKcs="/>
             <menu:item id="i_reserved_list" messageCode="global_menu_list" url="/reserveds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="cpwxHXngHBS47Y2LjVWR+SLiMVo="/>
         </menu:category>
+        <menu:category id="c_testimonials" z="2SdekOaIc5ndGDPTMl9XKQ/VEDA=">
+            <menu:item id="i_testimonials_new" messageCode="global_menu_new" url="/testimonialses?form" z="x0+xkJEkRbDqSMp/a+w1TepNIEI="/>
+            <menu:item id="i_testimonials_list" messageCode="global_menu_list" url="/testimonialses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5Tiv8eg1eSYewkczmectVAHmPxc="/>
+        </menu:category>
     </menu:menu>
 </div>

@@ -15,7 +15,7 @@
    		  <li> <!-- <img alt="" src="images/img-empty.png" class="png"> -->
           <h6>${item.hotelUser.userProfile.firstName} ${item.hotelUser.userProfile.lastName} ${, item.hotelUser.userProfile.lastName}</h6>
           ${item.date}
-          ${item.text}
+          ${item.testimonialsText}
            </li>
  		
  		</c:forEach>
