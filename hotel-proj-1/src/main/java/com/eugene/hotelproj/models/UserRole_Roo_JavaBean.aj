@@ -3,7 +3,9 @@
 
 package com.eugene.hotelproj.models;
 
+import com.eugene.hotelproj.models.HotelUser;
 import com.eugene.hotelproj.models.UserRole;
+import java.util.List;
 
 privileged aspect UserRole_Roo_JavaBean {
     
@@ -21,6 +23,22 @@ privileged aspect UserRole_Roo_JavaBean {
     
     public void UserRole.setRoleName(String roleName) {
         this.roleName = roleName;
+    }
+    
+    public String UserRole.getRoleCode() {
+        return this.roleCode;
+    }
+    
+    public void UserRole.setRoleCode(String roleCode) {
+        this.roleCode = roleCode;
+    }
+    
+    public List<HotelUser> UserRole.getUsers() {
+        return this.users;
+    }
+    
+    public void UserRole.setUsers(List<HotelUser> users) {
+        this.users = users;
     }
     
 }

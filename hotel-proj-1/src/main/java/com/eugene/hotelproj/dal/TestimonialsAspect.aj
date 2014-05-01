@@ -13,7 +13,7 @@ public aspect TestimonialsAspect {
 	public static List<Testimonials> Testimonials.getListOfTestimonials(){
 		List<Testimonials> list =  null;
 		
-		TypedQuery<Testimonials> q = Testimonials.entityManager().createQuery("SELECT t FROM Testimonials", Testimonials.class); 
+		TypedQuery<Testimonials> q = Testimonials.entityManager().createQuery("SELECT t FROM Testimonials t", Testimonials.class); 
 		if(!q.getResultList().isEmpty()){
 			list = q.getResultList();
 		}

@@ -1,14 +1,24 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
+  <c:set var="context" value="${pageContext.request.contextPath}" />
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
   <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
-  <util:panel id="title" title="${title}">
-    <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
-    </h3>
-    <p>
-      <spring:message code="welcome_text" />
-    </p>
-  </util:panel>
+  
+	<div class="content">
+        <div class="indent">
+          <h2>Hotel’s picture gallery</h2>
+          <div class="gallery-main png">
+            <div class="inner"> <img alt="" src="${context}/images/3page-img13.jpg"/>
+              <div class="prev"><a href="#"><img alt="" src="${context}/images/prev.png" class="png"/></a></div>
+              <div class="next"><a href="#"><img alt="" src="${context}/images/next.png" class="png"/></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 </div>

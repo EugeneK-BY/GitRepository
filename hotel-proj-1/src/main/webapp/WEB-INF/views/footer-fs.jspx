@@ -5,16 +5,16 @@
 
 <div id="footer">
     <ul class="nav">
-      <li><a href="#">Home</a>|</li>
-      <li><a href="#">Services</a>|</li>
-      <li><a href="#">Gallery</a>|</li>
-      <li><a href="#">Restaurant</a>|</li>
-      <li><a href="#">Testimonials</a>|</li>
-      <li><a href="#">Booking</a></li>
+      <li><a href="${context}">Home</a>|</li>
+      <li><a href="${context}/roomtypes/services">Services</a>|</li>
+      <li><a href="${context}/gallery">Gallery</a>|</li>
+      <li><a href="${context}/restaurant">Restaurant</a>|</li>
+      <li><a href="${context}/testimonials/userTestimonials">Testimonials</a>|</li>
+      <li><a href="${context}/booking">Booking</a></li>
     </ul>
     <div class="wrapper">
-      <div class="fleft">Copyright © 2009 <a href="#">Name Here</a>. All Rights Reserved</div>
-      <div class="fright">Designed by TemplateMonster - <a href="http://www.templatemonster.com/">website templates</a> provider</div>
+      <div class="fleft">Copyright © 2014 <a href="#">Eugene</a>. All Rights Reserved</div>
+      <!-- <div class="fright">Designed by TemplateMonster - <a href="http://www.templatemonster.com/">website templates</a> provider</div> -->
     </div>
   </div>
   

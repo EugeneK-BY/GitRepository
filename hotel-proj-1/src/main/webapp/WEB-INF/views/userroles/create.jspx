@@ -4,6 +4,8 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_eugene_hotelproj_models_UserRole" modelAttribute="userRole" path="/userroles" render="${empty dependencies}" z="0irjH3Tbef9SX+OdVXJn98Ufa1A=">
         <field:input field="roleName" id="c_com_eugene_hotelproj_models_UserRole_roleName" z="J1rfoqaQgCaSFsEElQdDbhSwvko="/>
+        <field:input field="roleCode" id="c_com_eugene_hotelproj_models_UserRole_roleCode" z="Iql9xDa1ESws8tsnjxEuKV2ATXI="/>
+        <field:simple field="users" id="c_com_eugene_hotelproj_models_UserRole_users" messageCode="entity_reference_not_managed" messageCodeAttribute="Hotel User" z="lxSdEvXGYac5c1NgWWUKNhbO4f4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_eugene_hotelproj_models_UserRole" render="${not empty dependencies}" z="xP2G/3ZVVe9O5ltiT9b+GfrcZ+k="/>
 </div>

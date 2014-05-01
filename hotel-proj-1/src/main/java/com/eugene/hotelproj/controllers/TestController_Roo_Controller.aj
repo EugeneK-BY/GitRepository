@@ -3,7 +3,7 @@
 
 package com.eugene.hotelproj.controllers;
 
-import com.eugene.hotelproj.controllers.HotelUserController;
+import com.eugene.hotelproj.controllers.TestController;
 import com.eugene.hotelproj.models.HotelUser;
 import com.eugene.hotelproj.models.UserProfile;
 import com.eugene.hotelproj.models.UserRole;
@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
-privileged aspect HotelUserController_Roo_Controller {
+privileged aspect TestController_Roo_Controller {
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String HotelUserController.create(@Valid HotelUser hotelUser, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String TestController.create(@Valid HotelUser hotelUser, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             populateEditForm(uiModel, hotelUser);
             return "hotelusers/create";
@@ -33,20 +33,20 @@ privileged aspect HotelUserController_Roo_Controller {
     }
     
     @RequestMapping(params = "form", produces = "text/html")
-    public String HotelUserController.createForm(Model uiModel) {
+    public String TestController.createForm(Model uiModel) {
         populateEditForm(uiModel, new HotelUser());
         return "hotelusers/create";
     }
     
     @RequestMapping(value = "/{id}", produces = "text/html")
-    public String HotelUserController.show(@PathVariable("id") Long id, Model uiModel) {
+    public String TestController.show(@PathVariable("id") Long id, Model uiModel) {
         uiModel.addAttribute("hoteluser", HotelUser.findHotelUser(id));
         uiModel.addAttribute("itemId", id);
         return "hotelusers/show";
     }
     
     @RequestMapping(produces = "text/html")
-    public String HotelUserController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String TestController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         if (page != null || size != null) {
             int sizeNo = size == null ? 10 : size.intValue();
             final int firstResult = page == null ? 0 : (page.intValue() - 1) * sizeNo;
@@ -60,7 +60,7 @@ privileged aspect HotelUserController_Roo_Controller {
     }
     
     @RequestMapping(method = RequestMethod.PUT, produces = "text/html")
-    public String HotelUserController.update(@Valid HotelUser hotelUser, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    public String TestController.update(@Valid HotelUser hotelUser, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             populateEditForm(uiModel, hotelUser);
             return "hotelusers/update";
@@ -71,13 +71,13 @@ privileged aspect HotelUserController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
-    public String HotelUserController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+    public String TestController.updateForm(@PathVariable("id") Long id, Model uiModel) {
         populateEditForm(uiModel, HotelUser.findHotelUser(id));
         return "hotelusers/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
-    public String HotelUserController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String TestController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         HotelUser hotelUser = HotelUser.findHotelUser(id);
         hotelUser.remove();
         uiModel.asMap().clear();
@@ -86,13 +86,13 @@ privileged aspect HotelUserController_Roo_Controller {
         return "redirect:/hotelusers";
     }
     
-    void HotelUserController.populateEditForm(Model uiModel, HotelUser hotelUser) {
+    void TestController.populateEditForm(Model uiModel, HotelUser hotelUser) {
         uiModel.addAttribute("hotelUser", hotelUser);
         uiModel.addAttribute("userprofiles", UserProfile.findAllUserProfiles());
         uiModel.addAttribute("userroles", UserRole.findAllUserRoles());
     }
     
-    String HotelUserController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
+    String TestController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
         String enc = httpServletRequest.getCharacterEncoding();
         if (enc == null) {
             enc = WebUtils.DEFAULT_CHARACTER_ENCODING;

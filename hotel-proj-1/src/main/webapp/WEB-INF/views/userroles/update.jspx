@@ -4,5 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_com_eugene_hotelproj_models_UserRole" idField="userRoleId" modelAttribute="userRole" path="/userroles" versionField="Version" z="39lOU1/MApeA72zvLh/AL2mJz7I=">
         <field:input field="roleName" id="c_com_eugene_hotelproj_models_UserRole_roleName" z="J1rfoqaQgCaSFsEElQdDbhSwvko="/>
+        <field:input field="roleCode" id="c_com_eugene_hotelproj_models_UserRole_roleCode" z="Iql9xDa1ESws8tsnjxEuKV2ATXI="/>
+        <field:simple field="users" id="c_com_eugene_hotelproj_models_UserRole_users" messageCode="entity_reference_not_managed" messageCodeAttribute="Hotel User" z="lxSdEvXGYac5c1NgWWUKNhbO4f4="/>
     </form:update>
 </div>

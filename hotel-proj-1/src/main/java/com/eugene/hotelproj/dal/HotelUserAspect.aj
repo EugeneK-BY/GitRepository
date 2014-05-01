@@ -19,6 +19,16 @@ public aspect HotelUserAspect {
         return this.userProfile.firstName + " " +  this.userProfile.lastName ;
     }
 	
+	public static HotelUser HotelUser.getHotelUser(Long id) {
+		HotelUser hu = null;
+		TypedQuery<HotelUser> q = HotelUser.entityManager().createQuery("SELECT hu FROM HotelUser hu WHERE hu.id = :id", HotelUser.class);
+		q.setParameter("id", id);
+		if(!q.getResultList().isEmpty()){
+			hu = q.getSingleResult();
+		}
+        return hu ;
+    }
+	
 	public static void UserRole.createBaseRoles(){
 		 UserRole.createRole("Пользователь", USER_ROLE_USER);
 		 UserRole.createRole("Администратор", USER_ROLE_ADMIN);
@@ -86,6 +96,8 @@ public aspect HotelUserAspect {
 		
 		return role;
 	}
+	
+	
 	
 	
 }

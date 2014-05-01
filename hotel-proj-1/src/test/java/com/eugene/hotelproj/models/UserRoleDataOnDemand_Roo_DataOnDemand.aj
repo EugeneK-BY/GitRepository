@@ -24,8 +24,14 @@ privileged aspect UserRoleDataOnDemand_Roo_DataOnDemand {
     
     public UserRole UserRoleDataOnDemand.getNewTransientUserRole(int index) {
         UserRole obj = new UserRole();
+        setRoleCode(obj, index);
         setRoleName(obj, index);
         return obj;
+    }
+    
+    public void UserRoleDataOnDemand.setRoleCode(UserRole obj, int index) {
+        String roleCode = "roleCode_" + index;
+        obj.setRoleCode(roleCode);
     }
     
     public void UserRoleDataOnDemand.setRoleName(UserRole obj, int index) {

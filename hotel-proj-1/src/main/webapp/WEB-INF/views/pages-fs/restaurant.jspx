@@ -1,14 +1,30 @@
-<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<div xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"  
+	version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
   <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
-  <util:panel id="title" title="${title}">
-    <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
-    </h3>
-    <p>
-      <spring:message code="welcome_text" />
-    </p>
-  </util:panel>
+	<c:set var="context" value="${pageContext.request.contextPath}" />
+	
+	<div class="content">
+        <div class="indent">
+          <h2>Today’s featured menu item</h2>
+          <img class="img-indent png alt" alt="" src="${context}/images/4page-img1.png" />
+          <div class="extra-wrap">
+            <h5>Foie gras!</h5>
+            <ul class="list2">
+              <li>Nice and tasty!</li>
+              <li>Made from French ingredients!</li>
+              <li>Cooked by Italian chef!</li>
+              <li>Awarded by Czech assosiation of chef!</li>
+              <li>Proved to be good for your health!</li>
+            </ul>
+            <div class="aligncenter"><strong class="txt2">AS LOW AS €19!</strong></div>
+          </div>
+        </div>
+      </div>
+
 </div>

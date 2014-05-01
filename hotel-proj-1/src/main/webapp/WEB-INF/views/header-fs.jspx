@@ -18,12 +18,13 @@
         <div class="header-box">
           <div class="inner">
             <ul class="nav">
-              <li><a href="${context}" class="current">Home page</a></li>
+              <!-- li><a href="${context}" class="current">Home page</a></li-->
+              <li><a href="${context}">Home page</a></li>
               <li><a href="${context}/roomtypes/services">Services</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="restaurant.html">Restaurant</a></li>
-              <li><a href="${context}/testimonials">Testimonials</a></li>
-              <li><a href="booking.html">Booking</a></li>
+              <li><a href="${context}/gallery">Gallery</a></li>
+              <li><a href="${context}/restaurant">Restaurant</a></li>
+              <li><a href="${context}/testimonials/userTestimonials">Testimonials</a></li>
+              <li><a href="${context}/booking">Booking</a></li>
             </ul>
           </div>
         </div>

@@ -6,8 +6,7 @@
         <field:input field="userName" id="c_com_eugene_hotelproj_models_HotelUser_userName" z="C9tNZF1gNQWyKi502zhEQWVQM9s="/>
         <field:input field="password" id="c_com_eugene_hotelproj_models_HotelUser_password" z="nX9AawDXm/qCJ8LaXBsP1TT9m38="/>
         <field:select field="userRole" id="c_com_eugene_hotelproj_models_HotelUser_userRole" itemValue="userRoleId" items="${userroles}" path="/userroles" z="/ah05oEG0uPH1wxpdRDWvoZW3+Y="/>
- 	    
- 	    <field:input field="userProfile.firstName" id="c_com_eugene_hotelproj_models_UserProfile_firstName" z="HjbIP7AAbxh8UHVJaDZOZIwQ+7Y="/>
+        <field:input field="userProfile.firstName" id="c_com_eugene_hotelproj_models_UserProfile_firstName" z="HjbIP7AAbxh8UHVJaDZOZIwQ+7Y="/>
         <field:input field="userProfile.lastName" id="c_com_eugene_hotelproj_models_UserProfile_lastName" z="Sth8dLMLxQVPW80Z1egMOM4R3g0="/>
         <field:input field="userProfile.fatherName" id="c_com_eugene_hotelproj_models_UserProfile_fatherName" z="/WATy2iyT1YPiNevWJ+U3pqaCBo="/>
         <field:input field="userProfile.phoneNumber" id="c_com_eugene_hotelproj_models_UserProfile_phoneNumber" z="3EUYXyhhBi1e25b5s3cSzvh8HVs="/>
@@ -15,6 +14,7 @@
         <field:input field="userProfile.skype" id="c_com_eugene_hotelproj_models_UserProfile_skype" z="Xk/1FxzPD6CSLBnXPoUGwaFDDSA="/>
         <field:input field="userProfile.country" id="c_com_eugene_hotelproj_models_UserProfile_country" z="MLDumoKLQlC/szSMKMLHAicnG4Y="/>
         <field:input field="userProfile.city" id="c_com_eugene_hotelproj_models_UserProfile_city" z="kioWxb7KqEOfG6qY/Wcuujskc70="/>
+        <field:select field="userProfile" id="c_com_eugene_hotelproj_models_HotelUser_userProfile" itemValue="userProfileId" items="${userprofiles}" path="/userprofiles" z="BnMqmStZjtSTQE34qGqBj1Ownaw="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_eugene_hotelproj_models_HotelUser" render="${not empty dependencies}" z="crJe+fTneuJfAKhji9u+IW9hVxk="/>
 </div>

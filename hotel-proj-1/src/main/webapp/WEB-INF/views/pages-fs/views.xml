@@ -6,7 +6,21 @@
         <put-attribute name="body" value="/WEB-INF/views/pages-fs/services.jspx"/>
     </definition>
 
-        <definition extends="default-sevices-fs" name="pages-fs/testimonials">
+    <definition extends="default-sevices-fs" name="pages-fs/testimonials">
         <put-attribute name="body" value="/WEB-INF/views/pages-fs/testimonials.jspx"/>
     </definition>
+    
+ 	<definition extends="default-gallery-fs" name="pages-fs/gallery">
+        <put-attribute name="body" value="/WEB-INF/views/pages-fs/gallery.jspx"/>
+    </definition>   
+        
+        
+ 	<definition extends="default-restourant-fs" name="pages-fs/restaurant">
+        <put-attribute name="body" value="/WEB-INF/views/pages-fs/restaurant.jspx"/>
+    </definition> 
+ 	
+ 	<definition extends="default-home-page-fs" name="pages-fs/booking">
+        <put-attribute name="body" value="/WEB-INF/views/pages-fs/booking.jspx"/>
+    </definition> 
+ 	
 </tiles-definitions>

@@ -5,6 +5,7 @@
     <page:list id="pl_com_eugene_hotelproj_models_UserRole" items="${userroles}" z="CmIz4x/Bd6rt0XR/DPBUM38X4pA=">
         <table:table data="${userroles}" id="l_com_eugene_hotelproj_models_UserRole" path="/userroles" typeIdFieldName="userRoleId" z="MJQbZ2s8GsTRmzr2RDi9g24tNQg=">
             <table:column id="c_com_eugene_hotelproj_models_UserRole_roleName" property="roleName" z="HEJKRuS6NFJ2yCHQ16iQTEo4j6M="/>
+            <table:column id="c_com_eugene_hotelproj_models_UserRole_roleCode" property="roleCode" z="X5GIZ3sBc9w7xw+bzKsSDTI3t3s="/>
         </table:table>
     </page:list>
 </div>

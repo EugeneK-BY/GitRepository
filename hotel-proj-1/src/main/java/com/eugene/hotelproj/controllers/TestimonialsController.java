@@ -16,8 +16,7 @@ public class TestimonialsController {
     @RequestMapping("/userTestimonials")
     public ModelAndView kindOfRooms() {
         
-    	RoomType.createBaseRoomTypes(); // 
-        Testimonials.addTestimonials(HotelUser.findHotelUser(1L), "Ахуенна");
+
     	
     	
         ModelAndView mav = new ModelAndView("pages-fs/testimonials");
