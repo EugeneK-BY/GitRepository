@@ -9,8 +9,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 privileged aspect HotelUser_Roo_ToString {
     
-/*    public String HotelUser.toString() {
+    public String HotelUser.toString() {
         return ReflectionToStringBuilder.toString(this, ToStringStyle.SHORT_PREFIX_STYLE);
-    }*/
+    }
     
 }

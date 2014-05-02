@@ -15,9 +15,9 @@ public aspect HotelUserAspect {
 	public static final String USER_ROLE_USER = "user";
 	public static final String USER_ROLE_MANAGER = "manager";
 	
-	public String HotelUser.toString() {
+/*	public String HotelUser.toString() {
         return this.userProfile.firstName + " " +  this.userProfile.lastName ;
-    }
+    }*/
 	
 	public static HotelUser HotelUser.getHotelUser(Long id) {
 		HotelUser hu = null;
