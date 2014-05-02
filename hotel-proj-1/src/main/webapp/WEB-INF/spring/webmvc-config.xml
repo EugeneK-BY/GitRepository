@@ -25,8 +25,13 @@
     </mvc:interceptors>
 
     <!-- Selects a static view for rendering without the need for an explicit controller -->
+<<<<<<< HEAD
 <mvc:view-controller path="/" view-name="index"/>
     <mvc:view-controller path="/login"/>
+=======
+    <mvc:view-controller path="/login"/>
+    <mvc:view-controller path="/" view-name="index"/>
+>>>>>>> 0caefafd40561c97a945d2c8d6aaf065cd0a89dd
     <mvc:view-controller path="/uncaughtException"/>
     <mvc:view-controller path="/resourceNotFound"/>
     <mvc:view-controller path="/dataAccessFailure"/>
