@@ -24,7 +24,7 @@ public class TestController {
     	}
     	
     	RoomType.createBaseRoomTypes(); // 
-        Testimonials.addTestimonials(HotelUser.getHotelUser(1L) , "Ахуенна");
+        Testimonials.addTestimonials(HotelUser.getHotelUser(1L) , "Все хорошо");
         
     	return "OK";
     }

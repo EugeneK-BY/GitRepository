@@ -15,7 +15,6 @@ public class TestimonialsController {
 	
     @RequestMapping("/userTestimonials")
     public ModelAndView kindOfRooms() {
-        
         ModelAndView mav = new ModelAndView("pages-fs/testimonials");
         mav.addObject("models", Testimonials.getListOfTestimonials());
         return mav;

@@ -26,6 +26,7 @@ public class Testimonials {
 	@NotNull
 	public Date date;
 	
+	@NotNull
 	@ManyToOne
 	public HotelUser hotelUser;
 	

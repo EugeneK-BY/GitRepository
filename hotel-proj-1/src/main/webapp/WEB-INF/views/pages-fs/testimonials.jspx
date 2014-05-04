@@ -11,7 +11,7 @@
 	<div class="indent">
       <h2>Customers’ testimonials</h2>
      <custom:testimonial models="${models}" id="id">
-     </custom:testimonial> 
+     </custom:testimonial>
      
      
       <div class="button1"><span><span><a href="#">SUBMIT YOUR OWN TESTIMONIAL</a></span></span></div>

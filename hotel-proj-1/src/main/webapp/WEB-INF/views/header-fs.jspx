@@ -4,12 +4,19 @@
 	<c:set var="context" value="${pageContext.request.contextPath}" />
  <div id="header">
     <div class="row-1">
+    <div class="login-div" >
+    	 <div class="button"><span><span><a href="#">Войти</a></span></span></div>
+    	  <div class="button"><span><span><a href="#">Регистрация</a></span></span></div>
+    </div>
       <div class="wrapper">
         <div class="logo">
           <h1><a href="#">Five Star</a></h1>
-          <em>Hotel</em> <strong>True Luxury</strong> </div>
-        <div class="phones"> 1-800-412-45-56<br/>
-          1-800-542-64-48 </div>
+          <em>Hotel</em> <strong>True Luxury</strong> 
+         </div>
+        <div class="phones"> 
+			1-800-412-45-56<br/>
+			1-800-542-64-48 
+		</div>
       </div>
     </div>
     <div class="row-2">
