@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     
-    <H1>${header}</H1>
+    <H2>${page_header}</H2>
     
     <form:create id="fc_com_eugene_hotelproj_models_HotelUser" modelAttribute="hotelUser" path="/hotelusers" render="${empty dependencies}" z="Op6D584i62LpLTjmYf3wWyNpLms=">
 

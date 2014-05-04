@@ -6,7 +6,7 @@
     <div class="row-1">
     <div class="login-div" >
     	 <div class="button"><span><span><a href="#">Войти</a></span></span></div>
-    	  <div class="button"><span><span><a href="#">Регистрация</a></span></span></div>
+    	  <div class="button"><span><span><a href="${context}/registration/user">Регистрация</a></span></span></div>
     </div>
       <div class="wrapper">
         <div class="logo">
