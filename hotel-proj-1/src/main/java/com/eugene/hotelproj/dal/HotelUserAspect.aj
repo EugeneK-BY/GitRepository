@@ -2,18 +2,14 @@ package com.eugene.hotelproj.dal;
 
 import javax.persistence.TypedQuery;
 
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-
 import com.eugene.hotelproj.models.HotelUser;
 import com.eugene.hotelproj.models.UserProfile;
 import com.eugene.hotelproj.models.UserRole;
+import com.eugene.hotelproj.util.HotelUtil;
 
 public aspect HotelUserAspect {
     
-	public static final String USER_ROLE_ADMIN = "admin";
-	public static final String USER_ROLE_USER = "user";
-	public static final String USER_ROLE_MANAGER = "manager";
+
 	
 	public String HotelUser.toString() {
         return this.userProfile.firstName + " " +  this.userProfile.lastName ;
@@ -30,9 +26,9 @@ public aspect HotelUserAspect {
     }
 	
 	public static void UserRole.createBaseRoles(){
-		 UserRole.createRole("Пользователь", USER_ROLE_USER);
-		 UserRole.createRole("Администратор", USER_ROLE_ADMIN);
-		 UserRole.createRole("Менеджер", USER_ROLE_MANAGER);
+		 UserRole.createRole("Пользователь", HotelUtil.USER_ROLE_USER);
+		 UserRole.createRole("Администратор", HotelUtil.USER_ROLE_ADMIN);
+		 UserRole.createRole("Менеджер", HotelUtil.USER_ROLE_MANAGER);
 	}
 
 	
@@ -54,7 +50,7 @@ public aspect HotelUserAspect {
 		user.userProfile.lastName = "Odmin";
 		user.userProfile.fatherName = "Odmin";
 		user.userProfile.mail = "Odmin@Odmin.com";
-		user.userRole = UserRole.getRoleByCode(USER_ROLE_ADMIN);
+		user.userRole = UserRole.getRoleByCode(HotelUtil.USER_ROLE_ADMIN);
 		user.userProfile.persist();
 		user.persist();
 		user = new HotelUser();
@@ -65,7 +61,7 @@ public aspect HotelUserAspect {
 		user.userProfile.lastName = "Manager";
 		user.userProfile.fatherName = "Manager";
 		user.userProfile.mail = "Manager@Manager.com";
-		user.userRole = UserRole.getRoleByCode(USER_ROLE_MANAGER);
+		user.userRole = UserRole.getRoleByCode(HotelUtil.USER_ROLE_MANAGER);
 		user.userProfile.persist();
 		user.persist();
 		user = new HotelUser();
@@ -76,7 +72,7 @@ public aspect HotelUserAspect {
 		user.userProfile.lastName = "User";
 		user.userProfile.fatherName = "User";
 		user.userProfile.mail = "User@User.com";
-		user.userRole = UserRole.getRoleByCode(USER_ROLE_USER);
+		user.userRole = UserRole.getRoleByCode(HotelUtil.USER_ROLE_USER);
 		user.userProfile.persist();
 		user.persist();
 		

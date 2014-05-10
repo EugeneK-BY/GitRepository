@@ -68,4 +68,9 @@ public aspect RoomTypeAspect {
 	}
 
 	
+    public String RoomType.toString() {
+        return this.name;
+    }
+	
+	
 }

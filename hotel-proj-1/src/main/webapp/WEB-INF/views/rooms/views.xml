@@ -13,4 +13,9 @@
 <definition extends="default" name="rooms/update">
         <put-attribute name="body" value="/WEB-INF/views/rooms/update.jspx"/>
     </definition>
+
+<definition extends="default" name="rooms/availableRooms">
+        <put-attribute name="body" value="/WEB-INF/views/rooms/availableRooms.jspx"/>
+    </definition>
+
 </tiles-definitions>

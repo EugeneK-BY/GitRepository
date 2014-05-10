@@ -2,6 +2,7 @@ package com.eugene.hotelproj.models;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -18,17 +19,17 @@ public class UserProfile {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long userProfileId;
 	
-	@NotEmpty
+	@NotNull
 	public String firstName;
 	
-	@NotEmpty
+	@NotNull
 	public String lastName;
 	
 	public String fatherName;
 	
 	public String phoneNumber;
 	
-	@NotEmpty @Email
+	@NotNull @Email
 	public String mail;
 	
 	public String skype;

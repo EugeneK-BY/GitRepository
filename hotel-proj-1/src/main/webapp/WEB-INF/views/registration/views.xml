@@ -2,6 +2,10 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 
+    	<definition extends="default-fs" name="registration/registrationComplite">
+        <put-attribute name="body" value="/WEB-INF/views/registration/registrationComplite.jspx"/>
+    </definition>
+    
 	<definition extends="default-fs" name="registration/userRegistration">
         <put-attribute name="body" value="/WEB-INF/views/registration/userRegistration.jspx"/>
     </definition>

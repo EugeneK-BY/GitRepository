@@ -5,7 +5,7 @@
     
     <H2>${page_header}</H2>
     
-    <form:create id="fc_com_eugene_hotelproj_models_HotelUser" modelAttribute="hotelUser" path="/hotelusers" render="${empty dependencies}" z="Op6D584i62LpLTjmYf3wWyNpLms=">
+    <form:create id="fc_com_eugene_hotelproj_models_HotelUser" modelAttribute="hotelUser" path="${path}" render="${empty dependencies}" z="">
 
         <field:input field="userName" id="c_com_eugene_hotelproj_models_HotelUser_userName" z="C9tNZF1gNQWyKi502zhEQWVQM9s="/>
         <field:input field="password" id="c_com_eugene_hotelproj_models_HotelUser_password" z="nX9AawDXm/qCJ8LaXBsP1TT9m38="/>

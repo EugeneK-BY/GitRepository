@@ -15,6 +15,14 @@
   <spring:url value="/resources/spring/Spring-Dojo.js" var="spring_dojo_url" />
   <spring:url value="/resources/images/favicon.ico" var="favicon" />
   
+  <link href="${context}/css-jq/base/jquery.ui.all.css"/>
+  <script src="${context}/js-jq/jquery-1.10.2.js"><!-- required for FF3 and Opera --></script>
+	<script src="${context}/js-jq/ui/jquery.ui.core.js"><!-- required for FF3 and Opera --></script>
+	<script src="${context}/js-jq/ui/jquery.ui.widget.js"><!-- required for FF3 and Opera --></script>
+	<script src="${context}/js-jq/ui/jquery.ui.datepicker.js"><!-- required for FF3 and Opera --></script>
+	<link href="${context}/css-jq/demos.css" rel="stylesheet"/>
+	
+	
   <!-- five star styles -->
   	<link href="${context}/styles/style.css" rel="stylesheet" type="text/css" />
 	<link href="${context}/styles/layout.css" rel="stylesheet" type="text/css" />
@@ -35,6 +43,11 @@
     <c:set var="plocale">${pageContext.response.locale}</c:set>
     <c:out value="${fn:replace(plocale, '_', '-')}" default="en" />
   </c:set>
+
+
+
+
+
 
   <script type="text/javascript">var djConfig = {parseOnLoad: false, isDebug: false, locale: '${fn:toLowerCase(userLocale)}'};</script>
 

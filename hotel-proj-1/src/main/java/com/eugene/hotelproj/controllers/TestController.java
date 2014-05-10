@@ -1,5 +1,6 @@
 package com.eugene.hotelproj.controllers;
 import com.eugene.hotelproj.models.HotelUser;
+import com.eugene.hotelproj.models.Room;
 import com.eugene.hotelproj.models.RoomType;
 import com.eugene.hotelproj.models.Testimonials;
 import com.eugene.hotelproj.models.UserRole;
@@ -25,6 +26,20 @@ public class TestController {
     	
     	RoomType.createBaseRoomTypes(); // 
         Testimonials.addTestimonials(HotelUser.getHotelUser(1L) , "Все хорошо");
+        
+        
+        	for(int i=1; i<10; i++){
+        		Room.createRoom(1, i, RoomType.findRoomType(1L));
+        	}
+
+        	for(int i=10; i<20; i++){
+        		Room.createRoom(i,1,RoomType.findRoomType(2L));
+        	}
+   
+        	for(int i=20; i<25; i++){
+        		Room.createRoom(i,1,RoomType.findRoomType(3L));
+        	}
+       
         
     	return "OK";
     }

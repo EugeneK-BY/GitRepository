@@ -1,31 +1,68 @@
 package com.eugene.hotelproj.controllers;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.eugene.hotelproj.models.HotelUser;
 import com.eugene.hotelproj.models.UserProfile;
 import com.eugene.hotelproj.models.UserRole;
+import com.eugene.hotelproj.util.HotelUtil;
 
 @Controller
 public class UserRegistrationController {
 
 	
-	@RequestMapping(value="/registration/{userType}", produces = "text/html" )
-	public ModelAndView createNewUser(@PathVariable("userType") String userType){
-		ModelAndView modelAndView =  new ModelAndView("registration/userRegistration");
+	@RequestMapping(value="/registrationForm/{userType}", produces = "text/html" )
+	public String createNewUserForm(@PathVariable("userType") String userType, Model uiModel){
+		
 		if(userType.equals("user")){
-			modelAndView.addObject("page_header", "Регистрация пользователя");
-			modelAndView.addObject("hotelUser", new HotelUser());
+			populateEditUserForm(uiModel, new HotelUser());
 		}else if(userType.equals("employee")){
-			modelAndView.addObject("page_header", "Регистрация сотрудника");
+			uiModel.addAttribute("page_header", "Регистрация сотрудника");
 		}else{
-			modelAndView.addObject("page_header", "Регистрация");
+			uiModel.addAttribute("page_header", "Регистрация");
 		}
-		return modelAndView;
+		return "registration/userRegistration";
 	}
 
+	
+	@RequestMapping(value="/registration/{userType}" ,method=RequestMethod.POST ,produces = "text/html")
+	public String createNewUser(@PathVariable("userType") String userType, @Valid HotelUser hotelUser, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest){
+		if(userType.equals("user")){
+			if (bindingResult.hasErrors()) {
+	        	populateEditUserForm(uiModel, hotelUser);
+	            return  "registration/userRegistration";
+	        }
+	        uiModel.asMap().clear();
+	        hotelUser.userProfile.persist();
+	        hotelUser.userRole = UserRole.getRoleByCode(HotelUtil.USER_ROLE_USER);
+	        hotelUser.persist();
+	        uiModel.addAttribute("page_header", "Регистрация пользователя успешна");
+	        return "registration/registrationComplite";
+		}else{
+        	populateEditUserForm(uiModel, hotelUser);
+            return  "registration/userRegistration";
+		}
+       // return "redirect:/hotelusers/" + encodeUrlPathSegment(hotelUser.getId().toString(), httpServletRequest);
+	}
+	
+	
+	private void populateEditUserForm(Model uiModel,HotelUser hotelUser){
+		uiModel.addAttribute("page_header", "Регистрация пользователя");
+		uiModel.addAttribute("path", "/registration/user");
+		if(hotelUser.userProfile==null){
+			hotelUser.userProfile =  new UserProfile();
+		}
+		uiModel.addAttribute("hotelUser", hotelUser);
+	}
+	
+	
+	
 }
