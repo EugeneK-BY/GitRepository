@@ -7,7 +7,7 @@
   <jsp:directive.attribute name="imageName" type="java.lang.String" required="true" rtexprvalue="true" description="" />
   <jsp:directive.attribute name="roomTypeName" type="java.lang.String" required="true" rtexprvalue="true" description="" />
  <jsp:directive.attribute name="roomDescription" type="java.lang.String" required="true" rtexprvalue="true" description="" />
- <jsp:directive.attribute name="floor" type="java.lang.String" required="true" rtexprvalue="true" description="" />
+ <jsp:directive.attribute name="floor" type="java.lang.String" required="false" rtexprvalue="false" description="" />
  <jsp:directive.attribute name="rooms" type="java.lang.String" required="true" rtexprvalue="true" description="" />
  <jsp:directive.attribute name="beds" type="java.lang.String" required="true" rtexprvalue="true" description="" />
  <jsp:directive.attribute name="baths" type="java.lang.String" required="true" rtexprvalue="true" description="" />
@@ -20,7 +20,9 @@
               <dl class="list1">
                 <dt>${roomTypeName}</dt>
                 <dd>${roomDescription}</dd>
-                <dd><span>${floor}</span>Floor</dd>
+                <c:if test="${not empty floor}">
+                	<dd><span>${floor}</span>Floor</dd>
+                </c:if>
                 <dd><span>${rooms}</span>Rooms</dd>
                 <dd><span>${beds}</span>Beds</dd>
                 <dd class="alt"><span>${baths}</span>Baths</dd>

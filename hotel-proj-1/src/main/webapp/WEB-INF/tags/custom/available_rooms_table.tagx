@@ -1,0 +1,59 @@
+<jsp:root 
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:form="http://www.springframework.org/tags/form" 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:custom="urn:jsptagdir:/WEB-INF/tags/custom"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+	version="2.0">
+  <jsp:output omit-xml-declaration="yes" />
+
+  <jsp:directive.attribute name="id" type="java.lang.String" required="true" rtexprvalue="true" description="The identifier for this tag (do not change!)" />
+ <jsp:directive.attribute name="data" type="java.util.Collection" required="true" rtexprvalue="true" description="" />
+<!--   <jsp:directive.attribute name="roomTypeId" type="java.lang.Long" required="true" rtexprvalue="true" description="" />
+ -->
+ 	
+	<c:set var="context" value="${pageContext.request.contextPath}" />	
+	<div>
+		<table class="availableRooms">
+		<tr>
+			<th>Номер</th>
+			<th>Этаж</th>
+			<th>Описание</th>
+		</tr>
+			<c:forEach items="${data}" var="item">
+				
+				<tr>
+					<td >
+						${item.roomNumber}
+					</td>
+					<td >
+						${item.floor}
+					</td>
+					<td >
+						<util:panel id="panel_${item.id}_${item.roomType.id}" title="${item.roomType.name}" openPane="false">
+			         	<custom:room_type 
+			         		id="roomtype_${item.roomType.id}" 
+			         		roomTypeName="${item.roomType.name}" 
+			         		roomTypeId="${item.roomType.id}" 
+			         		rooms="${item.roomType.rooms}" 
+			         		price="${item.roomType.price}" 
+			         		roomDescription="${item.roomType.description}" 
+			         		beds="${item.roomType.beds}" 
+			         		baths="${item.roomType.baths}" 
+			         		imageName="${item.roomType.image}">
+			         	</custom:room_type>
+			         	</util:panel>
+					</td>
+				</tr>
+			
+			</c:forEach>
+		</table>
+	</div>
+
+            
+            
+            
+</jsp:root>
