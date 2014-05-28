@@ -18,27 +18,27 @@
   </util:panel> -->
   <div class="content">
         <div class="indent">
-          <h2>FiveStar is happy to welcome you!</h2>
+          <h2>FiveStar рада приветствовать Вас!</h2>
           <img class="img-indent png" alt="" src="${context}/images/1page-img1.png" />
-          <p class="alt-top">Come alone or bring your family with you, stay here for a night or for weeks, stay here while on business trip or at some kind of conference - either way our hotel is the best possible variant.</p>
-          Feel free to contact us anytime in case you have any questions or concerns.
+          <p class="alt-top">Приходи один или принести свою семью с вами, остаться здесь на ночь или на несколько недель, остаться здесь, пока в командировке или на какой-то конференции -. Так или иначе наш отель является лучшим из возможных вариантов </p> 
+           Не стесняйтесь обращаться к нам в любое время в случае, если вы имеете любые вопросы или проблемы.
           <div class="clear"></div>
           <div class="line-hor"></div>
           <div class="wrapper line-ver">
             <div class="col-1">
-              <h3>Special Offers</h3>
+              <h3>Специальные предложения</h3>
               <ul>
-                <li>FREE wide-screen TV</li>
-                <li>50% Discount for Restaraunt service</li>
-                <li>30% Discount for 3 days+ orders</li>
-                <li>FREE drinks and beverages in rooms</li>
-                <li>Exclusive souvenirs</li>
+                 <li> бесплатно широкоэкранный телевизор </li> 
+                 <li> 50% скидка на услуги Restaraunt </li> 
+                 <li> 30% скидка на 3 дня + заказы </li> 
+                 <li> бесплатные напитки и напитки в номерах </li> 
+                 <li> Эксклюзивные сувениры </li>
               </ul>
               <div class="button"><span><span><a href="#">Order Now!</a></span></span></div>
             </div>
             <div class="col-2">
               <h3>Location</h3>
-              <p>We are located in the center of Prague surrounded by malls and boutiques.</p>
+             <p> Мы находимся в центре Минска, в окружении торговых центров и бутиков. </p>
               <dl class="contacts-list">
                 <dt>Gazek st., 210</dt>
                 <dd>1-800-412-4556</dd>
