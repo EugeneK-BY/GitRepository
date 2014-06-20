@@ -26,12 +26,12 @@
           <div class="inner">
             <ul class="nav">
               <!-- li><a href="${context}" class="current">Home page</a></li-->
-              <li><a href="${context}">Home page</a></li>
-              <li><a href="${context}/roomtypes/services">Services</a></li>
-              <li><a href="${context}/gallery">Gallery</a></li>
-              <li><a href="${context}/restaurant">Restaurant</a></li>
-              <li><a href="${context}/testimonials/userTestimonials">Testimonials</a></li>
-              <li><a href="${context}/booking">Booking</a></li>
+              <li><a href="${context}">Домашняя страница</a></li>
+              <li><a href="${context}/roomtypes/services">Услуги</a></li>
+              <li><a href="${context}/gallery">Галерея</a></li>
+              <li><a href="${context}/restaurant">Ресторан</a></li>
+              <li><a href="${context}/testimonials/userTestimonials">Отзывы</a></li>
+              <li><a href="${context}/booking">Бронирование</a></li>
             </ul>
           </div>
         </div>

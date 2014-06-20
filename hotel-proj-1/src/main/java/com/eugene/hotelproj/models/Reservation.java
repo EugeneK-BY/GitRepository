@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.transaction.UserTransaction;
 import javax.validation.constraints.Future;
 
 import org.springframework.roo.addon.javabean.RooJavaBean;
@@ -28,5 +29,8 @@ public class Reservation {
 	
 	@ManyToOne
 	public Room room;
+	
+	@ManyToOne
+	public HotelUser hotelUser; 
 	
 }

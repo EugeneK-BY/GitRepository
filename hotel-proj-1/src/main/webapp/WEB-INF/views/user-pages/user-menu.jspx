@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_room" z="e3e6qTdks0EVUaGbVSSNbM0HcXc=">
+        <!-- <menu:category id="c_room" z="e3e6qTdks0EVUaGbVSSNbM0HcXc=">
             <menu:item id="i_room_new" messageCode="global_menu_new" url="/rooms?form" z="fvAkKg908k/4/1ftKfhIuAeNmjE="/>
             <menu:item id="i_room_list" messageCode="global_menu_list" url="/rooms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="M5XFOS8myAtDzhNTcTwqAph0QtQ="/>
         </menu:category>
@@ -22,18 +22,18 @@
         <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
             <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
             <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
-        </menu:category>
-<!--         <menu:category id="c_reservation" z="QOKmLQs8mRLEvu7n5roIvJzPgHc=">
+        </menu:category> -->
+         <menu:category id="c_reservation" z="QOKmLQs8mRLEvu7n5roIvJzPgHc=">
             <menu:item id="i_reservation_new" messageCode="global_menu_new" url="/reservations?form" z="VN+vNiuOsWM9mc3+Pnfd51o3YUc="/>
             <menu:item id="i_reservation_list" messageCode="global_menu_list" url="/reservations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6zE/15aHij6RKEydLc48wX5Bg80="/>
-        </menu:category> -->
-        <menu:category id="c_reserved" z="lQOktGrC1IBcZhjNN0e2SlR8yus=">
+        </menu:category> 
+<!--         <menu:category id="c_reserved" z="lQOktGrC1IBcZhjNN0e2SlR8yus=">
             <menu:item id="i_reserved_new" messageCode="global_menu_new" url="/reserveds?form" z="VY+1OOamiS3TTqI3QTbV6UfgKcs="/>
             <menu:item id="i_reserved_list" messageCode="global_menu_list" url="/reserveds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="cpwxHXngHBS47Y2LjVWR+SLiMVo="/>
-        </menu:category>
-<!--         <menu:category id="c_testimonials" z="2SdekOaIc5ndGDPTMl9XKQ/VEDA=">
+        </menu:category> -->
+         <menu:category id="c_testimonials" z="2SdekOaIc5ndGDPTMl9XKQ/VEDA=">
             <menu:item id="i_testimonials_new" messageCode="global_menu_new" url="/testimonialses?form" z="x0+xkJEkRbDqSMp/a+w1TepNIEI="/>
             <menu:item id="i_testimonials_list" messageCode="global_menu_list" url="/testimonialses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5Tiv8eg1eSYewkczmectVAHmPxc="/>
-        </menu:category> -->
+        </menu:category>
     </menu:menu>
 </div>

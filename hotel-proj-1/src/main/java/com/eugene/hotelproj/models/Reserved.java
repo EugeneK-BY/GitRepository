@@ -27,4 +27,6 @@ public class Reserved {
 	@ManyToOne
 	public Room room;
 	
+	@ManyToOne
+	public HotelUser hotelUser; 
 }

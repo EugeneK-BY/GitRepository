@@ -34,4 +34,5 @@ public class Testimonials {
 	@Column(name="testimonialsText", columnDefinition="TEXT")
 	public String testimonialsText;
 	
+	public boolean isVisible;
 }

@@ -56,6 +56,12 @@
     <put-attribute name="menu" value="/WEB-INF/views/menus-fs/menu-restourant-fs.jspx" />
     <put-attribute name="footer" value="/WEB-INF/views/footer-fs.jspx" />
   </definition>  
+
+  <definition name="default-user-fs" template="/WEB-INF/layouts/default.jspx">
+    <put-attribute name="header" value="/WEB-INF/views/header-fs.jspx" />      
+    <put-attribute name="menu" value="/WEB-INF/views/user-pages/user-menu.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer-fs.jspx" />
+  </definition>  
   
  
 </tiles-definitions>

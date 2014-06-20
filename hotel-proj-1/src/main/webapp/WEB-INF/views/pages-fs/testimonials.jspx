@@ -9,7 +9,7 @@
 
 
 	<div class="indent">
-      <h2>Customers’ testimonials</h2>
+      <h2>Отзывы клиентов</h2>
      <custom:testimonial models="${models}" id="id">
      </custom:testimonial>
      

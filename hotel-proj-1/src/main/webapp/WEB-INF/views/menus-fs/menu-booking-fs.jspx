@@ -31,7 +31,7 @@
               </div>
               <div class="field"> Персон: 
                 <input type="text" value="1" name="Beds" />
-					 Комнот:
+					 Комнат:
                 <input type="text" value="1" name="Rooms" />
               </div>
               <div class="button"> <button>ПРОВЕРИТЬ ДОСТУПНЫЕ</button> </div>

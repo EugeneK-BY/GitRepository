@@ -9,23 +9,24 @@
   <jsp:directive.attribute name="openPane" type="java.lang.Boolean" required="false" rtexprvalue="true" description="Control if the title pane is opened or closed by default (default: true)" />
   <jsp:directive.attribute name="z" type="java.lang.String" required="false" description="Used for checking if element has been modified (to recalculate simply provide empty string value)" />
 
-  <c:if test="${empty render or render}">
-    <c:if test="${empty label}">
-      <spring:message code="label_${fn:toLowerCase(fn:substringAfter(id,'_'))}" var="label" htmlEscape="false" />
-    </c:if>
-    <c:if test="${empty labelPlural}">
-      <spring:message code="label_${fn:toLowerCase(fn:substringAfter(id,'_'))}_plural" var="labelPlural" htmlEscape="false" />
-    </c:if>
-    <spring:message arguments="${labelPlural}" code="entity_list_all" var="title_msg" htmlEscape="false" />
-    <util:panel id="${id}" title="${title_msg}" openPane="${openPane}">
-      <c:choose>
-        <c:when test="${not empty items}">
-          <jsp:doBody />
-        </c:when>
-        <c:otherwise>
-          <spring:message arguments="${label}" code="entity_not_found" />
-        </c:otherwise>
-      </c:choose>
-    </util:panel>
-  </c:if>
+	  <c:if test="${empty render or render}">
+	    <c:if test="${empty label}">
+	      <spring:message code="label_${fn:toLowerCase(fn:substringAfter(id,'_'))}" var="label" htmlEscape="false" />
+	    </c:if>
+	    <c:if test="${empty labelPlural}">
+	      <spring:message code="label_${fn:toLowerCase(fn:substringAfter(id,'_'))}_plural" var="labelPlural" htmlEscape="false" />
+	    </c:if>
+	    <spring:message arguments="${labelPlural}" code="entity_list_all" var="title_msg" htmlEscape="false" />
+	    <util:panel id="${id}" title="${title_msg}" openPane="${openPane}">
+	      <c:choose>
+	        <c:when test="${not empty items}">
+	          <jsp:doBody />
+	        </c:when>
+	        <c:otherwise>
+	          <spring:message arguments="${label}" code="entity_not_found" />
+	        </c:otherwise>
+	      </c:choose>
+	    </util:panel>
+	  </c:if>
+
 </jsp:root>

@@ -17,7 +17,7 @@
  	
 	<c:set var="context" value="${pageContext.request.contextPath}" />	
 	<div>
-		<table class="availableRooms">
+		<table class="availableRooms" border="1">
 		<tr>
 			<th>Номер</th>
 			<th>Этаж</th>
