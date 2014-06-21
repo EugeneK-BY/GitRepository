@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.eugene.hotelproj.models.HotelUser;
 import com.eugene.hotelproj.models.UserProfile;
 import com.eugene.hotelproj.models.UserRole;
+import com.eugene.hotelproj.util.CustomPasswordEncoder;
 import com.eugene.hotelproj.util.HotelUtil;
 
 @Controller
@@ -43,6 +44,7 @@ public class UserRegistrationController {
 	        uiModel.asMap().clear();
 	        hotelUser.userProfile.persist();
 	        hotelUser.userRole = UserRole.getRoleByCode(HotelUtil.USER_ROLE_USER);
+	        hotelUser.setPassword(CustomPasswordEncoder.encriptToSHA256(hotelUser.getPassword()));
 	        hotelUser.persist();
 	        uiModel.addAttribute("page_header", "Регистрация пользователя успешна");
 	        return "registration/registrationComplite";
