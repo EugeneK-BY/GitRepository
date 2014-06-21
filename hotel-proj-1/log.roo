@@ -7,3 +7,4 @@ entity jpa --class ~.models.HotelUser --testAutomatically
 web mvc setup
 web mvc all --package com.eugene.hotelproj.controllers
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-05-02 22:29:19
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-06-21 13:31:24
