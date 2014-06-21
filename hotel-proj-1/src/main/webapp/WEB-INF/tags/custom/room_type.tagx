@@ -4,10 +4,10 @@
   <jsp:directive.attribute name="id" type="java.lang.String" required="true" rtexprvalue="true" description="The identifier for this tag (do not change!)" />
 
   <jsp:directive.attribute name="roomTypeId" type="java.lang.Long" required="true" rtexprvalue="true" description="" />
-  <jsp:directive.attribute name="imageName" type="java.lang.String" required="true" rtexprvalue="true" description="" />
+  <jsp:directive.attribute name="imageName" type="java.lang.String" required="false" rtexprvalue="true" description="" />
   <jsp:directive.attribute name="roomTypeName" type="java.lang.String" required="true" rtexprvalue="true" description="" />
  <jsp:directive.attribute name="roomDescription" type="java.lang.String" required="true" rtexprvalue="true" description="" />
- <jsp:directive.attribute name="floor" type="java.lang.String" required="false" rtexprvalue="false" description="" />
+ <jsp:directive.attribute name="floor" type="java.lang.String" required="false" rtexprvalue="true" description="" />
  <jsp:directive.attribute name="rooms" type="java.lang.String" required="true" rtexprvalue="true" description="" />
  <jsp:directive.attribute name="beds" type="java.lang.String" required="true" rtexprvalue="true" description="" />
  <jsp:directive.attribute name="baths" type="java.lang.String" required="true" rtexprvalue="true" description="" />
