@@ -8,14 +8,6 @@
   <spring:message var="app_name" code="application_name" htmlEscape="false" />
   <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
   <c:set var="context" value="${pageContext.request.contextPath}" />
-<!--   <util:panel id="title" title="${title}">
-    <h3>
-      <spring:message code="welcome_h3" arguments="${app_name}" />
-    </h3>
-    <p>
-      <spring:message code="welcome_text" />
-    </p>
-  </util:panel> -->
   <div class="content">
         <div class="indent">
           <h2>FiveStar рада приветствовать Вас!</h2>

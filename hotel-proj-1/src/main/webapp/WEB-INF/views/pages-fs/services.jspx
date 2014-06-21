@@ -14,22 +14,19 @@
          <h2>We offer several kinds of rooms</h2>
          
           <div class="container">
-
 	         <c:forEach items="${models}" var="model">
-	         	<custom:room_type 
-	         		id="roomtype_${model.roomTypeId}" 
-	         		roomTypeName="${model.roomTypeName}" 
-	         		roomTypeId="${model.roomTypeId}" 
-	         		rooms="${model.rooms}" 
-	         		price="${model.price}" 
-	         		floor="${model.floor}" 
-	         		roomDescription="${model.roomDescription}" 
-	         		beds="${model.beds}" 
-	         		baths="${model.baths}" 
-	         		imageName="${model.imageName}">
-	         	</custom:room_type>
-	         </c:forEach>
-	         
+					<custom:room_type id="roomtype_${model.roomTypeId}"
+						roomTypeName="${model.roomTypeName}"
+						roomTypeId="${model.roomTypeId}" 
+						rooms="${model.rooms}"
+						price="${model.price}" 
+						floor="${model.floor}"
+						roomDescription="${model.roomDescription}" 
+						beds="${model.beds}"
+						baths="${model.baths}" 
+						imageName="${model.imageName}">
+					</custom:room_type>
+				</c:forEach>
             <div class="clear"></div>
           </div>
         </div>
