@@ -11,10 +11,10 @@
   
 <div class="content">
         <div class="indent">
-         <h2>We offer several kinds of rooms</h2>
+         <h2>Мы предлагаем следующие типы номеров</h2>
          
-          <div class="container">
-
+          <div class="container" style="padding-bottom: 15px">
+<div style="padding-bottom: 15px">
 	         <c:forEach items="${models}" var="model">
 	         	<custom:room_type 
 	         		id="roomtype_${model.roomTypeId}" 
@@ -29,8 +29,8 @@
 	         		imageName="${model.imageName}">
 	         	</custom:room_type>
 	         </c:forEach>
-	         
-            <div class="clear"></div>
+</div>
+            <div class="clear" style="padding-bottom: 15px"></div>
           </div>
         </div>
       </div>

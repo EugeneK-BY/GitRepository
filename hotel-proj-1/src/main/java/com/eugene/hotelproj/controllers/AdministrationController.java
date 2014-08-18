@@ -13,4 +13,11 @@ public class AdministrationController {
 		return new ModelAndView("administration");
 	}
 	
+	
+	@RequestMapping(value="/hotelusers/list", method=RequestMethod.GET ,produces = "text/html")
+	public ModelAndView hotelusersList(){
+		ModelAndView andView = new ModelAndView("hotelusers/list");
+		return andView;
+	}
+	
 }

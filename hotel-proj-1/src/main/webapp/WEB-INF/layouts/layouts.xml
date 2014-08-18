@@ -11,7 +11,7 @@
     <put-attribute name="footer" value="/WEB-INF/views/footer.jspx" /> -->
     <put-attribute name="header" value="/WEB-INF/views/header-fs.jspx" />    
     <put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />  
-    <put-attribute name="footer" value="/WEB-INF/views/footer-fs.jspx" />
+    <!-- <put-attribute name="footer" value="/WEB-INF/views/footer-fs.jspx" /> -->
   </definition>
 
   <definition name="public" template="/WEB-INF/layouts/default.jspx">
@@ -27,7 +27,6 @@
    <definition name="default-admin-fs" template="/WEB-INF/layouts/default.jspx">
     <put-attribute name="header" value="/WEB-INF/views/header-fs.jspx" />    
     <put-attribute name="menu" value="/WEB-INF/views/menu.jspx" />  
-    <put-attribute name="footer" value="/WEB-INF/views/footer-fs.jspx" />
   </definition>
   
   

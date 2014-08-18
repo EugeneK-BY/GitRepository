@@ -11,7 +11,7 @@
   
 	<div class="content">
         <div class="indent">
-          <h2>Hotel’s picture gallery</h2>
+          <h2>Галлерея фотографий отеля</h2>
           <div class="gallery-main png">
             <div class="inner"> <img alt="" src="${context}/images/3page-img13.jpg"/>
               <div class="prev"><a href="#"><img alt="" src="${context}/images/prev.png" class="png"/></a></div>

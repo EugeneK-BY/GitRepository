@@ -11,18 +11,17 @@
 	
 	<div class="content">
         <div class="indent">
-          <h2>Today’s featured menu item</h2>
+          <h2>Сегодняшний признакам пункт меню</h2>
           <img class="img-indent png alt" alt="" src="${context}/images/4page-img1.png" />
           <div class="extra-wrap">
-            <h5>Foie gras!</h5>
+            <h5>Фуа-гра!</h5>
             <ul class="list2">
-              <li>Nice and tasty!</li>
-              <li>Made from French ingredients!</li>
-              <li>Cooked by Italian chef!</li>
-              <li>Awarded by Czech assosiation of chef!</li>
-              <li>Proved to be good for your health!</li>
+			   <li> Хороший и вкусный! </li> 
+               <li> Изготовлен из французских ингредиентов! </li> 
+               <li> Приготовленные по итальянским шеф-поваром! </li> 
+               <li> Награжден Чешской АССОЦИАЦИЕЙ шеф-повара! </li> 
+               <li> Доказанные быть хорошо для вашего здоровья! </li>
             </ul>
-            <div class="aligncenter"><strong class="txt2">AS LOW AS €19!</strong></div>
           </div>
         </div>
       </div>

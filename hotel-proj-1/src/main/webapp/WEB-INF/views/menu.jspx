@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0" class="float-left" style="float: left;">
+<DIV style="padding-left: 15px; padding-bottom: 20px">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
-        <menu:category id="c_room" z="e3e6qTdks0EVUaGbVSSNbM0HcXc=">
-            <menu:item id="i_room_new" messageCode="global_menu_new" url="/rooms?form" z="fvAkKg908k/4/1ftKfhIuAeNmjE="/>
-            <menu:item id="i_room_list" messageCode="global_menu_list" url="/rooms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="M5XFOS8myAtDzhNTcTwqAph0QtQ="/>
+        <menu:category label="Номера" id="c_room" z="e3e6qTdks0EVUaGbVSSNbM0HcXc=">
+            <menu:item label="Создать" id="i_room_new" url="/rooms?form" z="fvAkKg908k/4/1ftKfhIuAeNmjE="/>
+            <menu:item label="Просмотреть" id="i_room_list" url="/rooms?page=1&amp;size=${empty param.size ? 10 : param.size}" z="M5XFOS8myAtDzhNTcTwqAph0QtQ="/>
         </menu:category>
-        <menu:category id="c_hoteluser" z="JfaTHyrHCHHvYsZ0rtHJL/4ejvk=">
-            <menu:item id="i_hoteluser_new" messageCode="global_menu_new" url="/hotelusers?form" z="3FeTSVGNjOZTmw0cli8r5oaCrak="/>
-            <menu:item id="i_hoteluser_list" messageCode="global_menu_list" url="/hotelusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+FxRISkycstSvK7tVW+fBTgtw8s="/>
+        <menu:category label="Типы номеров" id="c_roomtype" z="Y/+UDmgtAjw+Ac2Rp2rDwAjkE78=">
+            <menu:item label="Создать" id="i_roomtype_new" url="/roomtypes?form" z="4qtE0IN/50xkY2NoUmhONG3LthU="/>
+            <menu:item label="Просмотреть" id="i_roomtype_list" url="/roomtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="I0scyAa1pmjxbJm6+JNKvoSDzw8="/>
         </menu:category>
-        <menu:category id="c_userprofile" z="2kJ9OpCfQCJw1Bn7dN6zVF1sN3I=">
-            <menu:item id="i_userprofile_new" messageCode="global_menu_new" url="/userprofiles?form" z="RYXZPbBQnd8xC3sX9BmwGEMjG7I="/>
-            <menu:item id="i_userprofile_list" messageCode="global_menu_list" url="/userprofiles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="9erJNttMn6QObSrmM4/XDGz4+1Y="/>
+        <menu:category label="Пользователи системы" id="c_hoteluser" z="JfaTHyrHCHHvYsZ0rtHJL/4ejvk=">
+            <menu:item label="Создать" id="i_hoteluser_new" url="/hotelusers?form" z="3FeTSVGNjOZTmw0cli8r5oaCrak="/>
+            <menu:item label="Просмотреть" id="i_hoteluser_list" url="/hotelusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+FxRISkycstSvK7tVW+fBTgtw8s="/>
         </menu:category>
-        <menu:category id="c_roomtype" z="Y/+UDmgtAjw+Ac2Rp2rDwAjkE78=">
-            <menu:item id="i_roomtype_new" messageCode="global_menu_new" url="/roomtypes?form" z="4qtE0IN/50xkY2NoUmhONG3LthU="/>
-            <menu:item id="i_roomtype_list" messageCode="global_menu_list" url="/roomtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="I0scyAa1pmjxbJm6+JNKvoSDzw8="/>
+        <menu:category label="Профайлы" id="c_userprofile" z="2kJ9OpCfQCJw1Bn7dN6zVF1sN3I=">
+            <menu:item label="Создать" id="i_userprofile_new" url="/userprofiles?form" z="RYXZPbBQnd8xC3sX9BmwGEMjG7I="/>
+            <menu:item label="Просмотреть" id="i_userprofile_list" url="/userprofiles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="9erJNttMn6QObSrmM4/XDGz4+1Y="/>
         </menu:category>
-        <menu:category id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
-            <menu:item id="i_userrole_new" messageCode="global_menu_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
-            <menu:item id="i_userrole_list" messageCode="global_menu_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
+        <menu:category label="Роли" id="c_userrole" z="C4C1ZBdes4PUIjEM3Ajwwhn1EwA=">
+            <menu:item label="Создать" id="i_userrole_new" url="/userroles?form" z="qYpuuJuPupoYjD8LM0ISnxylj4o="/>
+            <menu:item label="Просмотреть" id="i_userrole_list" url="/userroles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fTjcT4INZTypLgu+ZHmwzE55ORs="/>
         </menu:category>
 <!--         <menu:category id="c_reservation" z="QOKmLQs8mRLEvu7n5roIvJzPgHc=">
             <menu:item id="i_reservation_new" messageCode="global_menu_new" url="/reservations?form" z="VN+vNiuOsWM9mc3+Pnfd51o3YUc="/>
             <menu:item id="i_reservation_list" messageCode="global_menu_list" url="/reservations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6zE/15aHij6RKEydLc48wX5Bg80="/>
         </menu:category> -->
-        <menu:category id="c_reserved" z="lQOktGrC1IBcZhjNN0e2SlR8yus=">
-            <menu:item id="i_reserved_new" messageCode="global_menu_new" url="/reserveds?form" z="VY+1OOamiS3TTqI3QTbV6UfgKcs="/>
-            <menu:item id="i_reserved_list" messageCode="global_menu_list" url="/reserveds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="cpwxHXngHBS47Y2LjVWR+SLiMVo="/>
+        <menu:category label="Зарезервированные номера" id="c_reserved" z="lQOktGrC1IBcZhjNN0e2SlR8yus=">
+            <menu:item label="Создать" id="i_reserved_new" url="/reserveds?form" z="VY+1OOamiS3TTqI3QTbV6UfgKcs="/>
+            <menu:item label="Просмотреть" id="i_reserved_list" url="/reserveds?page=1&amp;size=${empty param.size ? 10 : param.size}" z="cpwxHXngHBS47Y2LjVWR+SLiMVo="/>
         </menu:category>
+        
+                 <menu:category label="Заявка на регистрацию" id="c_reservation" z="QOKmLQs8mRLEvu7n5roIvJzPgHc=">
+            <menu:item label="Создать" id="i_reservation_new" url="/reservations?form" z="VN+vNiuOsWM9mc3+Pnfd51o3YUc="/>
+            <menu:item label="Просмотреть" id="i_reservation_list" url="/reservations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6zE/15aHij6RKEydLc48wX5Bg80="/>
+        </menu:category> 
+        
 <!--         <menu:category id="c_testimonials" z="2SdekOaIc5ndGDPTMl9XKQ/VEDA=">
             <menu:item id="i_testimonials_new" messageCode="global_menu_new" url="/testimonialses?form" z="x0+xkJEkRbDqSMp/a+w1TepNIEI="/>
             <menu:item id="i_testimonials_list" messageCode="global_menu_list" url="/testimonialses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="5Tiv8eg1eSYewkczmectVAHmPxc="/>
         </menu:category> -->
     </menu:menu>
+    </DIV>
 </div>

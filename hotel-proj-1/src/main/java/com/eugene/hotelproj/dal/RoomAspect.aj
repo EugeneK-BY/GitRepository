@@ -9,6 +9,7 @@ import com.eugene.hotelproj.models.Reservation;
 import com.eugene.hotelproj.models.Reserved;
 import com.eugene.hotelproj.models.Room;
 import com.eugene.hotelproj.models.RoomType;
+import com.eugene.hotelproj.models.UserProfile;
 import com.eugene.hotelproj.viewModels.ReservationVM;
 
 public aspect RoomAspect {
@@ -26,7 +27,8 @@ public aspect RoomAspect {
 	public static List<Room> Room.getListAvaliableRooms(ReservationVM reservationModel){
 		
 		List<Room> l =new ArrayList<Room>();
-		
+		UserProfile u = new UserProfile();
+		u.toString();
 		
 		TypedQuery<Long> q = Reserved.entityManager().createQuery("SELECT rv.room.id  FROM Reserved rv "
 															+ "WHERE (rv.dateIn > :dateIn AND rv.dateIn < :dateOut ) "

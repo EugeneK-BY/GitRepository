@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_eugene_hotelproj_models_RoomType" items="${roomtypes}" z="yjE0Y3rHh2q9s8an9uoIXDlCXug=">
         <table:table data="${roomtypes}" id="l_com_eugene_hotelproj_models_RoomType" path="/roomtypes" z="vv+QDgal5IxTko5UuqM/aeElRd0=">
-            <table:column id="c_com_eugene_hotelproj_models_RoomType_name" property="name" z="IKbXnKyu3VTPNvvUjYZZOGALIv4="/>
-            <table:column id="c_com_eugene_hotelproj_models_RoomType_description" property="description" z="QcHavWRX/f6LE7vj2vi9wWi36Bk="/>
-            <table:column id="c_com_eugene_hotelproj_models_RoomType_airConditioning" property="airConditioning" z="E9WcjqOfIVXK7ZONVr426zkIhZE="/>
-            <table:column id="c_com_eugene_hotelproj_models_RoomType_fringe" property="fringe" z="fDNSg4LplppMPK+deeAYh5JKaqI="/>
-            <table:column id="c_com_eugene_hotelproj_models_RoomType_Rooms" property="rooms" z="FuZxg6P+uOUOaDsKQDsrM6HG1Fc="/>
-            <table:column id="c_com_eugene_hotelproj_models_RoomType_Beds" property="beds" z="alvnUXleNftInMeJ8Zn/Zryetds="/>
+            <table:column label="Тип" id="c_com_eugene_hotelproj_models_RoomType_name" property="name" z="IKbXnKyu3VTPNvvUjYZZOGALIv4="/>
+            <table:column label="Описание" id="c_com_eugene_hotelproj_models_RoomType_description" property="description" z="QcHavWRX/f6LE7vj2vi9wWi36Bk="/>
+            <table:column label="Кондиционер" id="c_com_eugene_hotelproj_models_RoomType_airConditioning" property="airConditioning" z="E9WcjqOfIVXK7ZONVr426zkIhZE="/>
+            <table:column label="Хлодильник" id="c_com_eugene_hotelproj_models_RoomType_fringe" property="fringe" z="fDNSg4LplppMPK+deeAYh5JKaqI="/>
+            <table:column label="Конат" id="c_com_eugene_hotelproj_models_RoomType_Rooms" property="rooms" z="FuZxg6P+uOUOaDsKQDsrM6HG1Fc="/>
+            <table:column label="Кроватей" id="c_com_eugene_hotelproj_models_RoomType_Beds" property="beds" z="alvnUXleNftInMeJ8Zn/Zryetds="/>
         </table:table>
     </page:list>
 </div>

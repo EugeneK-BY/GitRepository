@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+targetCompatibility = 1.6
+
+dependencies {
+    compile 'commons-lang:commons-lang:20030203.000129'
+    testCompile 'junit:junit:4.+'
+}

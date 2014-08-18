@@ -2,6 +2,7 @@
  xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
  xmlns:jsp="http://java.sun.com/JSP/Page" 
  xmlns:custom="urn:jsptagdir:/WEB-INF/tags/custom"
+ xmlns:security="http://www.springframework.org/security/tags"
  version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8" />
   <jsp:output omit-xml-declaration="yes" />
@@ -10,11 +11,13 @@
 
 	<div class="indent">
       <h2>Отзывы клиентов</h2>
+      
      <custom:testimonial models="${models}" id="id">
      </custom:testimonial>
      
-     
-      <div class="button1"><span><span><a href="#">SUBMIT YOUR OWN TESTIMONIAL</a></span></span></div>
+     <security:authorize access="hasRole('user')">
+      <div class="button1"><span><span><a href="#">Добавить свой собственный отзыв</a></span></span></div>
+      </security:authorize>
     </div>
 
 

@@ -174,4 +174,12 @@ h6 { font-size:1em; color:#e7e7e7;}
 
 /*==========================================*/
 .login-div{float: right;}
-.float-left{ float: left; }
+.float-left{ width: auto;}
+.table-def{ background: white;
+	border: black;
+	border-width: 3px;
+	color: black;
+	width: 800px;
+	 }
+	
+	

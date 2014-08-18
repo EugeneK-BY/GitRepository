@@ -38,4 +38,13 @@ public class ReservationController {
 	}
 	
 	
+	@RequestMapping(value="/create", method=RequestMethod.GET, produces = "text/html" )
+	public String create(@Valid ReservationVM reservationModel, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest){
+		return "reservations/create";
+	}
+	
+	@RequestMapping(value="/list", method=RequestMethod.GET, produces = "text/html" )
+	public String list(@Valid ReservationVM reservationModel, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest){
+		return "reservations/list";
+	}
 }

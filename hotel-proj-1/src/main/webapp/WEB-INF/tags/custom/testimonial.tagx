@@ -13,7 +13,8 @@
  	<ul class="list4">
  	 	<c:forEach items="${models}" var="item" >
    		  <li> <!-- <img alt="" src="images/img-empty.png" class="png"> -->
-          <h6>${item.hotelUser.userProfile.firstName} ${item.hotelUser.userProfile.lastName}, ${item.hotelUser.userProfile.lastName}</h6>
+   		  <div style="padding-bottom: 20px"></div>
+          <h6>${item.hotelUser.userProfile.firstName} ${item.hotelUser.userProfile.lastName}, ${item.hotelUser.userProfile.fatherName}</h6>
           ${item.date}
           ${item.testimonialsText}
            </li>
